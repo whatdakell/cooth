@@ -1,0 +1,150 @@
+* {
+	box-sizing: border-box;
+}
+
+// If set Delay is true then $interval Delay must be 0
+@mixin staggerAnimation($numOfItems, $intervalDelay, $setStagger: false, $animation: false) {
+	@for $i from 1 through $numOfItems {
+		&:nth-child(#{($i)}) {
+			@if $setStagger {
+				$fixedDelay: $intervalDelay + $setStagger * $i;
+				@if $animation {
+					animation-delay: #{$fixedDelay}ms;
+				} @else {
+					transition-delay: #{$fixedDelay}ms;
+				}
+			} @else {
+				@if $animation {
+					animation-delay: #{$intervalDelay * $i}ms;
+				} @else {
+					transition-delay: #{$intervalDelay * $i}ms;
+				}
+			}
+		}
+	}
+}
+
+@function toRem($value) {
+	$remValue: calc($value / 16) + rem; 
+	@return $remValue;
+}
+
+
+@function stripUnit($value) {
+	@return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+	@return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+@mixin container {
+	width: 90%;
+	max-width: 1640px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin inner-container {
+	max-width: 1364px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin vh_center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin v_center($left) {
+	position: absolute;
+	left: $left;
+	top: 50%;
+	transform: translate(-$left, -50%);
+}
+@mixin h_center($top) {
+	position: absolute;
+	left: 50%;
+	top: $top;
+	transform: translate(-50%, -$top);
+}
+@mixin custom_center($left, $top) {
+	position: absolute;
+	left: $left;
+	top: $top;
+	transform: translate(-$left, -$top);
+}
+
+// Media Queries
+@mixin bp($point, $min: false, $max: false) {
+	@if $point == desktop {
+		@media (max-width: 1200px) {
+			@content;
+		}
+	} @else if $point == tablet {
+		@media (min-width: 630px) and (max-width: 1075px) {
+			@content;
+		}
+	} @else if $point == test1 {
+		@media (max-width: 1170px) {
+			@content;
+		}
+	} @else if $point == test2 {
+		@media (min-width: 1171px) {
+			@content;
+		}
+	} @else if $point == MD {
+		@media (min-width: 1025px) {
+			@content;
+		}
+	} @else if $point == M {
+		@media (max-width: 1024px) {
+			@content;
+		}
+	} @else if $point == SM {
+		@media (min-width: 768px) {
+			@content;
+		}
+	} @else if $point == S {
+		@media (max-width: 767px) {
+			@content;
+		}
+	} @else if $point == phone-tablet {
+		@media (max-width: 980px) {
+			@content;
+		}
+	} @else if $point == smallLandscape {
+		@media (max-width: 630px) and (orientation: landscape) {
+			@content;
+		}
+	} @else if $point == custom {
+		@if $min >=1 and $max != false {
+			@if (unitless($min) == true) {
+				$min: #{$min}px;
+			}
+			@if (unitless($max) == true) {
+				$max: #{$max}px;
+			}
+			@media (min-width: $min) and (max-width: $max) {
+				@content;
+			}
+		}
+		@if $min != false and $max == false {
+			@if (unitless($min) == true) {
+				$min: #{$min}px;
+			}
+			@media (min-width: $min) {
+				@content;
+			}
+		}
+		@if $min == 0 and $max != false {
+			@if (unitless($max) == true) {
+				$max: #{$max}px;
+			}
+			@media (max-width: $max) {
+				@content;
+			}
+		}
+	}
+}

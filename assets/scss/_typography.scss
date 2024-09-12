@@ -1,489 +1,122 @@
-// html {
-// 	font-size: 1rem;
+html {
+	font-size: 1rem;
 
-// 	@include bp(test1) {
-// 		font-size: 0.9rem;
-// 	}
-// 	@include bp(M) {
-// 		font-size: 0.8rem;
-// 	}
-// 	@include bp(S) {
-// 		font-size: 0.7rem;
-// 	}
-// }
-// .p1,
-// p,
-// body {
-// 	font-family: $prox;
-// 	font-size: rem(16px);
-// 	font-weight: normal;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1.44;
-// 	letter-spacing: -0.08px;
-// 	color: $navy;
-// 	@include bp(S) {
-// 		font-size: 12px;
-// 		line-height: 1.33;
-// 		letter-spacing: -0.06px;
-// 	}
-// }
-// .large-headline .elementor-heading-title {
-// 	font-family: $bitter;
-// 	font-size: rem(52px);
-// 	font-weight: 600;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1.25;
-// 	letter-spacing: 3.12px;
-// 	color: $navy;
-// 	text-transform: uppercase;
-// 	@include bp(S) {
-// 		font-size: 24px;
-// 		font-weight: 600;
-// 		font-stretch: normal;
-// 		font-style: normal;
-// 		line-height: 1.46;
-// 		letter-spacing: 1.44px;
-// 	}
-// }
-
-// .header .elementor-heading-title,
-// .header {
-// 	font-family: $bitter;
-// 	font-size: rem(36px);
-// 	font-weight: bold;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1.25;
-// 	letter-spacing: 2.16px;
-// 	color: $navy;
-// 	text-transform: uppercase;
-// }
-
-// .subhead-1 .elementor-heading-title,
-// .subhead-1 {
-// 	font-family: $bitter;
-// 	font-size: rem(22px);
-// 	font-weight: 500;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1.27;
-// 	letter-spacing: 1.32px;
-// 	color: $navy;
-// 	text-transform: uppercase;
-// 	@include bp(S) {
-// 		font-size: 18px;
-// 		letter-spacing: 0.9px;
-// 	}
-// }
-// .white a,
-// .white p,
-// .white {
-// 	color: white !important;
-// }
-// .subhead-2 p,
-// .subhead-2 .elementor-heading-title,
-// .subhead-2 {
-// 	font-family: $bitter !important;
-// 	font-size: 22px;
-// 	font-weight: normal;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1.27;
-// 	letter-spacing: 0.07px;
-// 	color: $navy;
-// }
-
-// .overline {
-// 	font-family: $prox;
-// 	font-size: rem(12px);
-// 	font-weight: 500;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 2.5;
-// 	letter-spacing: 1.2px;
-// 	color: $accent;
-// }
-// .white,
-// .white .elementor-heading-title {
-// 	color: white;
-// }
-
-// .nav-font {
-// 	font-family: $prox;
-// 	font-size: 12px;
-// 	font-weight: bold;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1;
-// 	letter-spacing: 1.8px;
-// 	text-align: left;
-// 	color: white;
-// 	text-transform: uppercase;
-// }
-
-// .booking-font {
-// 	font-family: $bitter;
-// 	font-size: rem(14px);
-// 	font-weight: 500;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 2.86;
-// 	letter-spacing: 0.7px;
-// 	text-align: left;
-// 	color: #7f7f7f;
-// 	text-transform: uppercase;
-// }
-// .body-copy-small p,
-// .body-copy-small {
-// 	font-size: 14px;
-// 	font-family: $prox;
-// 	font-weight: normal;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1.29;
-// 	letter-spacing: -0.07px;
-// 	@include bp(S) {
-// 		font-size: 12px;
-// 		line-height: 1.33;
-// 		letter-spacing: -0.06px;
-// 	}
-// }
-
-// .fine-print {
-// 	font-family: $prox;
-// 	font-size: 12px;
-// 	font-weight: normal;
-// 	font-stretch: normal;
-// 	font-style: italic;
-// 	line-height: 1.58;
-// 	letter-spacing: -0.06px;
-// 	text-align: left;
-// 	color: #3b434e;
-// }
-
-// .eyebrow {
-// 	margin-bottom: 20px;
-// 	font-family: $prox;
-// 	font-size: 12px;
-// 	font-weight: 500;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 2.5;
-// 	letter-spacing: 1.2px;
-// 	text-align: left;
-// 	color: #83afba;
-// 	text-transform: uppercase;
-// 	display: block;
-// 	position: relative;
-// 	.elementor-widget-container,
-// 	span {
-// 		padding-right: 10px;
-// 		display: inline-block;
-// 		color: #83afba;
-// 		background-color: white;
-// 	}
-// 	&:after {
-// 		content: '';
-// 		background-color: #83afba;
-// 		height: 1px;
-// 		width: 100%;
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 0;
-// 		z-index: -1;
-// 	}
-// }
-
-// .static-cta,
-// #static-cta .elementor-button {
-// 	font-family: $prox;
-// 	font-size: rem(14px);
-// 	font-weight: bold;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 0.86;
-// 	letter-spacing: 2.1px;
-// 	text-align: left;
-// 	color: #9f3926;
-// 	text-align: left;
-// 	text-transform: uppercase;
-// 	background-color: transparent;
-// 	overflow: hidden;
-// 	display: inline-block;
-// 	.elementor-button-icon {
-// 		padding-left: 5px;
-// 	}
-// 	&:after {
-// 		content: '';
-// 		border-bottom: 1px solid #9f3926;
-// 		width: 100%;
-// 		display: block;
-// 		transition: $hover;
-// 		margin-top: 5px;
-// 	}
-// 	&:hover {
-// 		&:after {
-// 			transform: translateX(calc(100% - 15px));
-// 		}
-// 	}
-// 	&.teal {
-// 		color: #83afba !important;
-// 		&:after {
-// 			border-bottom: 1px solid #83afba;
-// 		}
-// 	}
-// 	@include bp(S) {
-// 		font-size: 10px;
-// 		line-height: 1.2;
-// 		letter-spacing: 1.5px;
-// 	}
-// }
-// .button-style {
-// 	width: 100%;
-// 	height: 50px;
-// 	border-radius: 25px;
-// 	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-// 	background-color: #9f3926;
-// 	border: none;
-// 	font-family: $prox;
-// 	font-size: rem(14px);
-
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1.2;
-// 	letter-spacing: 2.1px;
-
-// 	color: #fff;
-// 	text-transform: uppercase;
-// 	position: relative;
-// 	padding: rem(18px) rem(25px);
-// 	@include bp(S) {
-// 		height: 39px;
-// 		font-size: 10px;
-// 		line-height: 1.2;
-// 		letter-spacing: 1.5px;
-// 	}
-
-// 	transition: all 0.5s ease-in-out;
-// 	&:hover {
-// 		background-color: white;
-
-// 		border: solid 1px #9f3926;
-// 		color: #9f3926;
-// 		cursor: pointer;
-// 	}
-// }
-// .arrow-right {
-// 	display: inline-block;
-
-// 	&:after {
-// 		padding-left: 5px;
-// 		font-family: 'Font Awesome 5 Free';
-// 		font-weight: 900;
-// 		content: '\f061';
-// 	}
-// }
-
-// #button-style {
-// 	width: auto !important;
-// 	.elementor-button {
-// 		@extend .button-style;
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 		.elementor-button-text {
-// 			@extend .arrow-right;
-// 		}
-// 	}
-// }
-
-// .red {
-// 	color: $red;
-// }
-// #breadcrumbs {
-// 	a {
-// 	}
-// 	margin-left: 0px;
-// 	.trail-item {
-// 		font-family: $prox;
-// 		font-size: 12px;
-// 		font-weight: normal;
-// 		font-stretch: normal;
-// 		font-style: normal;
-// 		line-height: 1;
-// 		letter-spacing: normal;
-// 		text-align: left;
-// 		color: #83afba !important;
-// 		&:after {
-// 			color: #3b434e !important;
-// 		}
-// 		span {
-// 			text-decoration: underline;
-// 		}
-// 		a:-webkit-any-link,
-// 		a:visited {
-// 			color: #83afba !important;
-// 		}
-// 		&.trail-end span {
-// 			text-decoration: none;
-// 			color: #3b434e !important;
-// 		}
-// 	}
-// 	margin-top: rem(32px);
-// 	margin-bottom: rem(32px);
-// }
-
-// .price .elementor-widget-text-editor,
-// .price {
-// 	@extend .overline;
-// 	margin-bottom: 5px;
-// 	text-transform: uppercase;
-// 	color: $accent !important;
-// }
-
-// .border-top {
-// 	border-top: solid 1px #8caeb8;
-// }
-
-// .elementor-widget-text-editor {
-// 	color: $navy;
-// 	font-family: $prox;
-// }
-
-// .custom-stick {
-// 	position: sticky;
-// 	position: -webkit-sticky;
-// 	top: 50px;
-// 	@include bp(S) {
-// 		position: relative;
-// 		top: 0;
-// 	}
-// }
-
-// .animated-border {
-// 	display: block;
-// 	position: relative;
-
-// 	&:after {
-// 		content: '';
-// 		background-color: #83afba;
-// 		height: 1px;
-// 		width: 100%;
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 0;
-// 		z-index: -1;
-// 	}
-// 	&:before {
-// 		content: '';
-// 		background-color: #83afba;
-// 		height: 1px;
-// 		width: 100%;
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 0;
-// 		z-index: -1;
-// 	}
-// }
-// a:-webkit-any-link {
-// 	color: $accent;
-// }
-// a.static-cta:-webkit-any-link {
-// 	color: $red;
-// }
-// a.static-cta.teal:-webkit-any-link {
-// 	color: $accent;
-// }
-// a.static-cta.white:-webkit-any-link {
-// 	color: white;
-// }
-// a.static-cta.white:after {
-// 	color: white;
-// 	border-color: white;
-// }
-// .teal {
-// 	color: $accent !important;
-// }
-// .search-results {
-// 	z-index: 0 !important;
-// 	.search {
-// 		max-width: 600px;
-// 		border: 1px solid $navy;
-// 		margin-top: rem(60px);
-// 	}
-// 	.search-results-box {
-// 		padding-top: rem(60px);
-// 		margin-top: rem(100px);
-// 		border-top: 1px solid $accent;
-// 	}
-// 	.elementor-pagination .page-numbers.current {
-// 		color: $red !important;
-// 	}
-// 	.elementor-widget-theme-archive-title {
-// 		@extend .large-headline;
-// 		max-width: 600px;
-// 		margin-bottom: rem(50px);
-// 		font-weight: inherit;
-// 		font-family: inherit;
-// 		font-size: 2.25rem !important;
-// 	}
-// 	article {
-// 		.elementor-post__text {
-// 			display: flex;
-// 			margin-bottom: rem(40px);
-// 			.elementor-post__excerpt {
-// 				margin-top: rem(20px);
-// 				margin-bottom: rem(30px);
-// 			}
-// 			.elementor-post__title {
-// 				@extend .header;
-// 				margin-bottom: 0px;
-// 				a {
-// 					font-weight: inherit;
-// 					font-family: inherit;
-// 				}
-// 			}
-// 		}
-// 		.elementor-post__thumbnail__link {
-// 			margin-bottom: 0px !important;
-// 		}
-// 	}
-// 	.elementor-post__read-more {
-// 		@extend .static-cta;
-// 		color: $red !important;
-// 		margin-top: auto;
-// 	}
-// 	.page-content {
-// 		@extend .smaller-inner;
-// 		h2 {
-// 			border-top: 1px solid $accent;
-// 			@extend .subhead-1;
-// 			padding-top: rem(50px);
-// 			margin-top: rem(20px);
-// 			margin-bottom: rem(20px);
-// 		}
-// 		p {
-// 			margin-bottom: rem(50px);
-// 		}
-// 	}
-// }
-// .teal-uppercase p,
-// .teal-uppercase {
-// 	font-family: $prox;
-// 	font-size: rem(16px);
-// 	text-transform: uppercase;
-// 	font-stretch: normal;
-// 	font-style: normal;
-// 	line-height: 1.88;
-// 	letter-spacing: 1.6px;
-// 	text-align: left;
-// 	color: #83afba;
-// }
+	@include bp(test1) {
+		font-size: 0.9rem;
+	}
+	@include bp(M) {
+		font-size: 0.8rem;
+	}
+	@include bp(S) {
+		font-size: 0.7rem;
+	}
+}
 
 
+.pill{
+	position: relative;
+	display: inline-block;
+	// z-index: 1;
+	&:before{
+		content:'';
+		z-index: -1;
+		background-color: $yellow;
+		border:1px solid $grey;
+		position: absolute;
+		height: 1.1em;
+    width: 100%;
+		padding: 0 toRem(35);
+		box-sizing: content-box!important;
+		// top:5px;
+		bottom: 4px;
+		left:50%;
+		transform:translateX(-50%);
+		border-radius: 70px;
+		// top:50%;
+		// transform: translateY(-50%);
+	}
+	
+}
 
-h1{
-	font-size: 45px;
+.elementor-button{
+	min-width: 227px;
+	font-weight: bold;
+	--e-global-typography-accent-font-weight: bold;
+	font-size: 20px;
+	padding: 18px 50px!important;
+}
+.button{
+	&.black a{
+		background-color: black;
+		border-color: $yellow;
+		color: white;
+
+	}
+	&.white a{
+		background-color: white;
+		&:hover{
+			background-color: $yellow;
+		}
+	}
+}
+.body-intro p{
+	font-size: toRem(36);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.08px;
+	&:not(:first-of-type){
+		margin-top: toRem(30);
+	}
+}
+h1,h2,h3,h4,h5,h6{
+	position: relative;
+	z-index: 2;
+	em{
+		font-family: $ny!important;
+		font-weight: 300!important;
+		letter-spacing: normal!important;
+	}
+}
+.headline-1 {h1,h2,h3,h4,h5,h6 {
+	font-size: toRem(132);
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -6.6px;
+}
+}
+
+.headling-3 {
+	font-size: toRem(36);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.08px;
+  text-align: center;
+  color: #f9f3ef;
+}
+.heading-4 h4{
+  font-size: toRem(70);
+	line-height: 1.1;
+  font-weight: 900!important;
+	--e-global-typography-primary-weight: 900;
+}
+
+.copy p{
+	font-size: toRem(28);
+  font-weight: normal!important;
+	// --e-global-typography-primary-font-weight:  normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.yellow{
+	color:$yellow;
 }

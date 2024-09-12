@@ -1,0 +1,32 @@
+// $extra-light: 200;
+// $light: 300;
+// $norm: 400;
+// $med: 500;
+// $bold: 700;
+// $extra-bold: 800;
+
+$red: #9f3926;
+$navy: #3b434e;
+$accent: #83afba;
+
+$yellow: #ffca45;
+$grey:#2b2b2d;
+$dark-gray:black;
+
+// $hover: all 300ms ease-in;
+// $slide-hover: opacity 1s ease-in-out;
+$html-font-size: 16px;
+
+$ny: "NyghtSerif", Sans-serif;
+// $prox: proxima-nova, sans-serif;
+// $bitter: 'Bitter', serif;
+
+h3,
+h2,
+h1,
+p,
+h4,
+a {
+	margin: 0;
+	padding: 0;
+}
