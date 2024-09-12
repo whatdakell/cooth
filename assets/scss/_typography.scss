@@ -16,7 +16,21 @@ html {
 .pill{
 	position: relative;
 	display: inline-block;
+	font-weight: 900;
 	// z-index: 1;
+	&.white{
+		&:before{
+			background-color: white;
+		}
+	}
+	&.black{
+		background-color: transparent;
+		&:before{
+			background-color: black;
+			bottom: 50%;
+			transform: translate(-50%,50%);
+		}
+	}
 	&:before{
 		content:'';
 		z-index: -1;
@@ -25,7 +39,7 @@ html {
 		position: absolute;
 		height: 1.1em;
     width: 100%;
-		padding: 0 toRem(35);
+		padding: 0 10px;
 		box-sizing: content-box!important;
 		// top:5px;
 		bottom: 4px;
@@ -70,7 +84,7 @@ html {
 		margin-top: toRem(30);
 	}
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6, p{
 	position: relative;
 	z-index: 2;
 	em{
@@ -115,6 +129,7 @@ h1,h2,h3,h4,h5,h6{
   line-height: 1.21;
   letter-spacing: normal;
   text-align: left;
+	font-family: "SatoshiVariable"!important;
 }
 
 .yellow{

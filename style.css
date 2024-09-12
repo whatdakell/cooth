@@ -19,6 +19,21 @@ html {
 .pill {
   position: relative;
   display: inline-block;
+  font-weight: 900;
+}
+
+.pill.white:before {
+  background-color: white;
+}
+
+.pill.black {
+  background-color: transparent;
+}
+
+.pill.black:before {
+  background-color: black;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
 }
 
 .pill:before {
@@ -29,7 +44,7 @@ html {
   position: absolute;
   height: 1.1em;
   width: 100%;
-  padding: 0 2.1875rem;
+  padding: 0 10px;
   box-sizing: content-box !important;
   bottom: 4px;
   left: 50%;
@@ -77,7 +92,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   position: relative;
   z-index: 2;
 }
@@ -87,7 +103,8 @@ h2 em,
 h3 em,
 h4 em,
 h5 em,
-h6 em {
+h6 em,
+p em {
   font-family: "NyghtSerif", Sans-serif !important;
   font-weight: 300 !important;
   letter-spacing: normal !important;
@@ -133,10 +150,15 @@ h6 em {
   line-height: 1.21;
   letter-spacing: normal;
   text-align: left;
+  font-family: "SatoshiVariable" !important;
 }
 
 .yellow {
   color: #ffca45;
+}
+
+body {
+  margin: 0px;
 }
 
 .elementor-element {
@@ -163,12 +185,42 @@ h6 em {
   max-width: 1337px !important;
 }
 
+.inner-hero {
+  height: 43.75rem;
+}
+
+.inner-hero .content-box {
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 700px;
+}
+
+.inner-hero .content-box .body-intro {
+  margin-top: 4.1875rem;
+}
+
 .hero {
-  height: 100vh;
+  height: 63.0625rem;
+}
+
+.hero .pill:before {
+  content: "";
+  padding: 0 2.1875rem;
+}
+
+.hero .content-box {
+  margin-top: auto;
+  margin-bottom: 18.75rem;
+  max-width: 851px;
+}
+
+.hero .content-box .copy {
+  margin-top: 3.75rem;
+  margin-bottom: 3.75rem;
 }
 
 .hero.e-con {
-  --height: 100vh;
+  --height: toRem(1090);
 }
 
 .white p,
@@ -183,7 +235,7 @@ h6 em {
 .home-blf .go-foward {
   position: relative;
   background-color: black;
-  margin-top: -20vh;
+  margin-top: -12.5rem;
   border-radius: 20.4px;
 }
 
@@ -291,6 +343,15 @@ h6 em {
 
 .list {
   padding-left: 11.25rem;
+}
+
+.list.horiztonal {
+  padding-left: 0;
+}
+
+.list .e-grid.yellow .elementor-widget-counter .elementor-counter-number-wrapper {
+  background-color: #ffca45;
+  color: black;
 }
 
 .list .e-grid .elementor-widget-counter .elementor-counter {
@@ -464,6 +525,111 @@ h6 em {
 
 .testimonal .elementor-testimonial__cite span {
   color: white;
+}
+
+.out-method {
+  background-color: white;
+  border-radius: 20.4px;
+  border: 1px solid #2b2b2d;
+  margin-top: -3.125rem;
+  border-radius: 20.4px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 7.5rem;
+}
+
+.out-method::before {
+  max-width: 250px;
+  position: absolute;
+  right: 0;
+  left: auto;
+}
+
+.out-method .copy {
+  padding-top: 3.125rem;
+  max-width: 800px;
+  width: 80%;
+}
+
+.out-method .elementor-element-d8a0452 {
+  padding-top: 1.3125rem;
+  padding-bottom: 4.375rem;
+}
+
+.out-method .build-with {
+  padding-top: 4.125rem;
+  padding-bottom: 4.125rem;
+}
+
+.out-method .build-with .copy {
+  padding-top: 0;
+}
+
+.work {
+  margin: 6.25rem auto;
+}
+
+.work .text-item .copy {
+  margin-bottom: 41px;
+}
+
+.work .text-item:before {
+  width: 100px;
+  left: -15px;
+}
+
+.work .hover-grid-container .hover-item {
+  padding-left: 1.875rem;
+}
+
+.work .hover-grid-container .hover-item:hover .content-contain {
+  display: block;
+}
+
+.work .hover-grid-container .hover-item:hover .elementor-widget-image {
+  margin-right: auto;
+}
+
+.work .hover-grid-container .hover-item:hover img {
+  max-width: 100px;
+}
+
+.work .hover-grid-container .content-contain {
+  display: none;
+}
+
+.work .hover-grid-container .content-contain .yellow span {
+  color: #ffca45 !important;
+}
+
+.work .hover-grid-container .content-contain span,
+.work .hover-grid-container .content-contain p {
+  font-size: 10px;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.work .hover-grid-container .content-contain .box {
+  margin-bottom: 6px;
+  font-size: 8px !important;
+  background-color: black;
+  padding: 6px 14px 6px 15px;
+  border: solid 0.5px #f9f3ef;
+  background-color: #191919;
+  width: auto;
+  display: inline-block;
+  max-width: max-content;
+  text-transform: uppercase;
+}
+
+.work .hover-grid-container .content-contain .box:not(:first-child) {
+  margin-top: 17px;
+}
+
+.work .hover-grid-container:before {
+  right: -53px;
+  width: 450px;
+  top: -240px;
 }
 
 @media (max-width: 1170px) {

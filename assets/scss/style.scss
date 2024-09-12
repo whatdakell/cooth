@@ -12,11 +12,37 @@
 	max-width:1337px!important;
 }
 
+.inner-hero{
+	height: toRem(700);
+	.content-box{
+		margin-top: auto;
+		margin-bottom: auto;
+		max-width: 700px;
+		.body-intro {
+			margin-top: toRem(67);
+		}
+	}
+}
 .hero{
-	height: 100vh;
-
+	height: toRem(1009);
+	.pill{
+		&:before{
+			content:'';
+			padding: 0 toRem(35);
+		}
+	}
+	.content-box{
+		margin-top: auto;
+		margin-bottom: toRem(300);
+		max-width: 851px;
+		.copy{
+			margin-top: toRem(60);
+			margin-bottom: toRem(60);
+		}
+	}
+	
 	&.e-con{
-		--height: 100vh;
+		--height: toRem(1090);
 	}
 }
 
@@ -34,7 +60,7 @@
 	.go-foward{
 		position: relative;
 		background-color: $dark-gray;
-		margin-top: -20vh;
+		margin-top: toRem(-200);
 		border-radius: 20.4px;
 		&:before{
 			position: absolute;
@@ -137,7 +163,17 @@
 .list{
 	// margin-top: toRem(-50);
 	padding-left: toRem(90 * 2);
+	&.horiztonal{
+		padding-left: 0;
+	}
+
 	.e-grid{
+		&.yellow{
+			.elementor-widget-counter .elementor-counter-number-wrapper{
+				background-color: $yellow;
+				color: black;
+			}
+		}
 		.elementor-widget-counter{
 			.elementor-counter{
 				align-items: center;
@@ -294,6 +330,111 @@
 		span{
 			color:white;
 
+		}
+	}
+}
+
+
+
+
+
+// Our Work
+.out-method{
+	background-color: white;
+	border-radius: 20.4px;
+	border:1px solid $grey;
+	margin-top: toRem(-50);
+	border-radius: 20.4px;
+	position: relative;
+	overflow: hidden;
+	padding-top: toRem(120);
+	&::before{
+		max-width: 250px;
+		position: absolute;
+		right:0;
+		left: auto;
+	}
+	.copy{
+		padding-top: toRem(50);
+		max-width: 800px;
+		width: 80%;
+	}
+	.elementor-element-d8a0452{
+		padding-top: toRem(21);
+		padding-bottom: toRem(70);
+
+
+	}
+	.build-with {
+		padding-top: toRem(66);
+		padding-bottom: toRem(66);
+		.copy{
+		padding-top: 0;
+	}
+}
+}
+
+
+.work{
+	margin: toRem(100) auto;
+	.text-item{
+		.copy{
+			margin-bottom: 41px;
+		}
+		&:before{
+			width: 100px;
+			left:-15px;
+		}
+	}
+	.hover-grid-container{
+		.hover-item{
+			padding-left: toRem(30);
+			&:hover{
+				.content-contain{
+					display: block;
+				}
+				.elementor-widget-image{
+					margin-right: auto;
+				}
+				img{
+					max-width: 100px;
+				}
+			}
+		}
+		.content-contain{
+			display: none;
+			.yellow span{
+				color: $yellow!important;
+			}
+			span,
+			p{
+				font-size: 10px;
+				font-weight: 900;
+				line-height: normal;
+			}
+			.box{
+				margin-bottom: 6px;
+				font-size: 8px!important;
+				background-color: black;
+				// margin-bottom: 17px;
+				padding: 6px 14px 6px 15px;
+				border: solid 0.5px #f9f3ef;
+				background-color: #191919;
+				width: auto;
+				display: inline-block;
+				max-width: max-content;
+				text-transform: uppercase;
+				&:not(:first-child){
+					margin-top: 17px;
+
+				}
+			}
+
+		}
+		&:before{
+			right:-53px;
+			width: 450px;
+			top:-240px;
 		}
 	}
 }
