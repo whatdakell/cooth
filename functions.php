@@ -38,6 +38,7 @@ endif;
 
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 100 );
 
+add_filter( 'hello_elementor_page_title', '__return_false' );
 
 
 defined( 'CHLD_THM_CFG_IGNORE_PARENT' ) or define( 'CHLD_THM_CFG_IGNORE_PARENT', TRUE );
