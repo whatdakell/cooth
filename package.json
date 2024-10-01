@@ -18,6 +18,7 @@
     "gulp-sass": "^5.1.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "gulp-autoprefixer": "^3.1.1",
     "postcss": "^8.4.45",
     "sass": "^1.78.0"

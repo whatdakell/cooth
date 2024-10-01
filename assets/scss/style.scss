@@ -3,6 +3,8 @@
 @import 'mixins';
 @import 'typography';
 @import 'global';
+// @import 'animate.css';
+@import 'owl';
 
 
 // width: 1337px;
@@ -10,10 +12,15 @@
 .e-con-inner{
 	// max-width: 1337px;
 	max-width:1337px!important;
+	width:97%!important;
 }
 
 .inner-hero{
-	height: toRem(700);
+	min-height: toRem(850);
+	.scroll-section-wrapper{
+		padding-top:0;
+		padding-bottom:0;
+	}
 	.content-box{
 		margin-top: auto;
 		margin-bottom: auto;
@@ -69,17 +76,21 @@
 		}
 	}
 }
+
 .scroll-section{
 	padding-top: toRem(166);
 	padding-bottom: toRem(92);
 	padding-left: toRem(123);
+	
 	&-wrapper{
 		max-height: 600px;
 		padding-top: toRem(73);
+		padding-bottom:toRem(73);
 		margin-bottom: toRem(36);
 
 		.body-intro{
 			overflow: scroll!important;
+			padding-bottom:50px;
 		}
 		&:after{
 			content:'';
@@ -88,6 +99,7 @@
 			// background-position: bottom;
 			position: absolute;
 			bottom: 0;
+			z-index: 100;
 			width: 100%;
 			height:200px;
 		}
@@ -97,6 +109,9 @@
 	}
 }
 
+.tan.scroll-section-wrapper:after{
+	background: linear-gradient(180deg, transparent 0,  #f9f3ef 100%);
+}
 
 .logo-box{
 	background-image: url('/assets/img/logo.svg');
@@ -111,7 +126,9 @@
 		position: relative;
 	}
 	position: relative;
-	padding: toRem(90) 0 toRem(150);
+	padding: 0;
+	padding-top: toRem(90);
+	padding-bottom: toRem(150);
 	&:before{
 		left:-90px;
 	}
@@ -155,7 +172,7 @@
 		left:15%;
 		img{
 			max-width: toRem(190);
-			top: - toRem(190/2);
+			top: - toRem(95);
 		}
 	}
 }
@@ -262,6 +279,52 @@
 .testimonal{
 	padding: toRem(150) 0;
 	border-top: solid 0.5px #92907d;
+	&.white{
+		color:black;
+		.swiper{
+			padding-bottom: toRem(50)!important;
+		}
+		&:before{
+			top:auto;
+			width: toRem(840);
+			right:0;
+			z-index: 100;
+			left:auto;
+			transform:none;
+			bottom:toRem(-193);
+		}
+		.swiper-pagination-bullet{
+			border:1px solid black;
+			&-active{
+				background-color:#ffca45!important;
+			}
+
+		}
+		.elementor-testimonial__content{
+			width: 100%!important;
+			padding-bottom: 0!important;
+		}
+		.e-con-inner{
+			padding-left: 0;
+			.elementor-testimonial__content{
+				width: 100%;
+			}
+			.headline-1{
+				line-height: 0.92;
+				letter-spacing: -3.93px;
+				font-size: 6rem;
+			}
+			&:after{
+				display: none;
+			}
+		}
+		p{
+			color:black!important;
+		}
+		.elementor-testimonial__content .elementor-testimonial__text{
+			color:black!important;
+		}
+	}
 	.e-con-inner {
 		position: relative;
 		padding-left: toRem(80);
@@ -374,6 +437,27 @@
 }
 }
 
+.oro-call-out {
+	border-radius: 20.4px;
+	position: absolute;
+	top:-100px;
+	left:50%;
+	transform:translateX(-50%);
+	overflow: hidden;
+  border: solid 0.5px #191919;
+  background-color: #fff;
+	width:90%!important;
+	.button.white{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	&:before{
+		position: absolute;
+    right:100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+	}
+}
 
 .work{
 	margin: toRem(100) auto;
@@ -437,4 +521,71 @@
 			top:-240px;
 		}
 	}
+}
+
+
+
+
+
+.build-with-us{
+	// height:toRem(400);
+	padding: toRem(200) 0;
+	.body-intro {
+		max-width: 700px!important;
+		margin-top: toRem(70);
+		padding-bottom: toRem(70);
+		margin-block-end:initial;
+	}
+}
+
+
+.bwu{
+	&:before{
+		position: absolute;
+		bottom:-77px;
+		top:auto;
+		z-index: 100;
+	}
+}
+
+
+.toggle-content{
+
+	.headling-3, li{
+		color:white;
+		text-align: left!important;
+	}
+	.elementor-tab-title{
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		// ali
+	}
+	#elementor-tab-title-2181{
+		background-image: url('../../uploads/2024/10/cooth-core.png');
+		background-repeat: no-repeat;
+		background-position: center left;
+	}
+	.elementor-toggle-title{
+		font-size: 16px;
+		margin-right: 40px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 2.13;
+		letter-spacing: normal;
+		text-align: right;
+		color: #f9f3ef!important;
+	}
+}
+
+.purpose{
+	padding: 0 toRem(50);
+	background-color: black;
+	border-radius: 20.4px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius:0px;
+	// border-radius: ;
+	// border: solid 0.5px #f9f3ef;
+  // background-color: #191919;
 }

@@ -2,6 +2,49 @@ body {
 	margin: 0px;
 }
 
+.max-width{
+	width:80%;
+}
+.same-space{
+	margin: toRem(100) auto;
+}
+.square-pill{
+	border: solid 2.1px #f9f3ef;
+  background-color: #191919;
+	text-transform: uppercase;
+  font-size: 13px;
+	width: auto;
+	max-width: max-content!important;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.77;
+	padding:10px;
+  letter-spacing: 2.21px;
+  text-align: center;
+}
+.brand-list{
+	color:white;
+
+	ul{
+		list-style: none;
+		padding-inline-start:20px;
+	}
+	li {
+		position: relative;
+		}
+		li:before {
+		position: absolute;
+		left: -1.2em;
+		bottom: 0.3em;
+		content: ' ';
+		display: block;
+		width: 9px;
+		height: 9px;
+		border: 2px solid white;
+		border-radius: 50%;
+		}
+}
 // #not-visible {
 // }
 // .site-branding .show-title {
@@ -69,4 +112,5 @@ body {
 
 .inner-width .e-con-inner{
 	max-width: 1125px!important;
+	width:97%!important;
 }
