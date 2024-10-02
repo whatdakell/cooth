@@ -20,6 +20,11 @@ html {
   position: relative;
   display: inline-block;
   font-weight: 900;
+  z-index: 1;
+}
+
+.pill.white {
+  color: black;
 }
 
 .pill.white:before {
@@ -278,7 +283,7 @@ p em {
 }
 
 body {
-  margin: 0px;
+  margin: 0px auto;
 }
 
 .max-width {
@@ -287,6 +292,22 @@ body {
 
 .same-space {
   margin: 6.25rem auto;
+}
+
+.small-space {
+  margin: 3.125rem auto;
+}
+
+.simple-padding-bottom {
+  margin-bottom: 6.25rem !important;
+}
+
+.smaller-padding-bottom {
+  margin-bottom: 4.375rem !important;
+}
+
+.smallerhead-padding-bottom {
+  margin-bottom: 2.5rem !important;
 }
 
 .square-pill {
@@ -1125,9 +1146,13 @@ body {
   z-index: 100;
 }
 
+.toggle-content {
+  padding-top: 3.125rem;
+}
+
 .toggle-content .headling-3,
 .toggle-content li {
-  color: white;
+  color: #f9f3ef;
   text-align: left !important;
 }
 
@@ -1135,12 +1160,19 @@ body {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  border-bottom: solid 0.5px #f9f3ef !important;
+  background-color: black;
 }
 
 .toggle-content #elementor-tab-title-2181 {
   background-image: url("../../uploads/2024/10/cooth-core.png");
   background-repeat: no-repeat;
   background-position: center left;
+}
+
+.toggle-content .elementor-tab-content {
+  border: none !important;
+  background-color: transparent !important;
 }
 
 .toggle-content .elementor-toggle-title {
@@ -1152,15 +1184,220 @@ body {
   line-height: 2.13;
   letter-spacing: normal;
   text-align: right;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: #f9f3ef !important;
+  border: none;
+}
+
+.toggle-content .elementor-toggle-item {
+  margin-bottom: 1.875rem;
+}
+
+.bread {
+  padding-bottom: 9.375rem;
 }
 
 .purpose {
   padding: 0 3.125rem;
-  background-color: black;
-  border-radius: 20.4px;
+  background-color: #191919;
+  border-radius: 72.4px;
+  border-bottom-left-radius: 0;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
+}
+
+.purpose:after {
+  content: "";
+  position: absolute;
+  bottom: -190px;
+  left: -155px;
+  width: 607px;
+  height: 600px;
+  background-size: contain;
+  background-image: url("../../uploads/2024/10/abstract-component-_clutter-to-clarity_-section.png");
+}
+
+.purpose:before {
+  position: absolute;
+  height: 1400px;
+  top: -10px;
+  left: -56px;
+}
+
+.butter-wrapper {
+  width: 100%;
+}
+
+.butter-wrapper .e-con-inner {
+  max-width: 1440px !important;
+  width: 100% !important;
+  margin-right: 0;
+}
+
+.butter-wrapper .e-con-inner .bread-butter-grid {
+  margin-top: 6.25rem;
+  margin-bottom: 4.375rem;
+}
+
+.butter-wrapper .e-con-inner .bread-butter-grid .elementor-widget-image {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 662px;
+}
+
+.butter-wrapper .e-con-inner .bread-butter-grid .content-box .copy {
+  margin-top: 2.5rem;
+  margin-bottom: 4.375rem;
+  max-width: 690px;
+}
+
+.butter-wrapper .e-con-inner .bread-butter-grid .content-box .smaller-copy {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.butter-wrapper .e-con-inner .bread {
+  margin-left: auto;
+  margin-right: 0;
+  z-index: 100;
+}
+
+.butter-wrapper .e-con-inner .bread .plus-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 3.125rem 0;
+  border-bottom: solid 0.5px #f9f3ef;
+}
+
+.butter-wrapper .e-con-inner .bread .plus-wrapper p {
+  font-family: SatoshiVariable;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.butter-wrapper .e-con-inner .bread .plus-wrapper img {
+  width: 118px;
+  height: 62px;
+}
+
+.build-with-us-testi {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
+.build-with-us-testi:before {
+  position: absolute;
+  width: 300px;
+  right: 0;
+  left: auto;
+  top: -60px;
+}
+
+.build-with-us-testi .elementor-widget-testimonial {
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+}
+
+.build-with-us-testi .elementor-widget-testimonial .elementor-testimonial-content {
+  font-size: 2.25rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.08px;
+  margin-bottom: 1.875rem;
+  padding-top: 5px;
+}
+
+.discomfort {
+  padding: 8.75rem 0;
+  position: relative;
+  border-top: solid 2.1px #2b2b2d;
+}
+
+.discomfort .alive:before {
+  content: "";
+  position: absolute;
+  left: -250px;
+  top: auto;
+  bottom: -150px;
+}
+
+.discomfort .smaller-copy {
+  margin-top: 3.125rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2b2b2d;
+  max-width: 90% !important;
+}
+
+.discomfort:after {
+  content: "";
+  position: absolute;
+  background-color: #f9f3ef;
+  height: 25rem;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+.cooth-block {
+  max-width: 1300px;
+  margin: 2.5rem auto;
+}
+
+.cooth-block .tan-block {
+  background-color: #f9f3ef;
+  display: flex;
+  height: 170px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cooth-block .heading-4 h4 {
+  font-size: 20px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: #2b2b2d;
+}
+
+.cooth-block .smaller-copy {
+  margin-left: auto;
+}
+
+.founders {
+  background-color: #2b2b2d;
+}
+
+.white-box {
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2b2b2d;
+  padding: 1.25rem 1.875rem;
+  border: 1px solid #2b2b2d;
 }
 
 @media (max-width: 1170px) {

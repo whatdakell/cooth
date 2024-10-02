@@ -1,5 +1,6 @@
 body {
-	margin: 0px;
+	margin: 0px auto;
+	// max-width: 1440px;
 }
 
 .max-width{
@@ -7,6 +8,21 @@ body {
 }
 .same-space{
 	margin: toRem(100) auto;
+}
+.small-space{
+	margin: toRem(50) auto;
+}
+.simple-padding-bottom{
+	margin-bottom: toRem(100)!important;
+
+}
+.smaller-padding-bottom{
+	margin-bottom: toRem(70)!important;
+
+}
+.smallerhead-padding-bottom{
+	margin-bottom: toRem(40)!important;
+
 }
 .square-pill{
 	border: solid 2.1px #f9f3ef;

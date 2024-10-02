@@ -17,8 +17,9 @@ html {
 	position: relative;
 	display: inline-block;
 	font-weight: 900;
-	// z-index: 1;
+	z-index: 1;
 	&.white{
+		color:black;
 		&:before{
 			background-color: white;
 		}

@@ -176,11 +176,15 @@ jQuery(function ($) {
 		
 	// 	// }
 	// });
+
+
+
 	if(location.href.includes('/hero/')){
 		$(toggleInput).attr('checked','checked')
 	}
 
 		
+
 
 		// owlCardOptions = {
 		// 	items: 1,
@@ -252,3 +256,20 @@ jQuery(function ($) {
 		// }
 	});
 });
+
+(function($) {
+	$ && $(function() {
+			$('.elementor-toggle-item:first-child')
+					.children('.elementor-tab-title')
+							.addClass('elementor-active')
+							.attr({
+									'aria-expanded': 'true',
+									tabindex: '0',
+									'aria-selected': 'true'
+							})
+							.end()
+					.children('.elementor-tab-content')
+							.addClass('elementor-active')
+							.css('display', 'block');
+	});
+})(window.jQuery);
