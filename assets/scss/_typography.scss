@@ -12,7 +12,9 @@ html {
 	}
 }
 
-
+h1 .pill{
+	z-index: -1;
+}
 .pill{
 	position: relative;
 	display: inline-block;
@@ -62,6 +64,9 @@ html {
 	padding: 18px 50px!important;
 }
 .button{
+	&.yellowoutline{
+		border: 1px solid $yellow;
+	}
 	&.black a{
 		background-color: black;
 		// border-color: $yellow;
