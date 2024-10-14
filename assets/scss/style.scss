@@ -67,6 +67,7 @@ body{
 		margin-top: auto;
 		margin-bottom: toRem(300);
 		max-width: 851px;
+		width: 85%;
 		.copy{
 			margin-top: toRem(60);
 			margin-bottom: toRem(60);
@@ -110,13 +111,26 @@ body{
 	&-wrapper{
 		max-height: 600px;
 		padding-top: toRem(73);
-		padding-bottom:toRem(73);
+		// padding-bottom:toRem(73);
 		margin-bottom: toRem(36);
 
 		.body-intro{
 			overflow: scroll!important;
 			padding-bottom:50px;
 		}
+		// &:before{
+		
+		// 		content:'';
+		// 		// background: linear-gradient(0deg, $darkgrey, transparent);
+		// 		background: linear-gradient(0deg, transparent 0,  $dark-gray 100%);
+		// 		// background-position: bottom;
+		// 		position: absolute;
+		// 		top: 0;
+		// 		z-index: 100;
+		// 		width: 100%;
+		// 		height:toRem(50);
+			
+		// }
 		&:after{
 			content:'';
 			// background: linear-gradient(0deg, $darkgrey, transparent);
@@ -126,7 +140,7 @@ body{
 			bottom: 0;
 			z-index: 100;
 			width: 100%;
-			height:toRem(300);
+			height:toRem(200);
 		}
 	}
 	.button{
@@ -358,9 +372,12 @@ body{
 }
 .slider.elementor-widget-testimonial-carousel .elementor-testimonial{
 	padding-left: 15px!important;
+}
+.slider:not(.home).elementor-widget-testimonial-carousel .elementor-testimonial{
+
 	.pill{
 		&:before{
-			height: 0.7em;
+			height: 1em;
 			bottom: 40%;
 		}
 
@@ -438,6 +455,10 @@ body{
 		margin-left: 70px;
 		top:-70px;
 		background-size: 30% auto!important;
+		@include bp(S){
+			margin-left: 0;
+			top:-47px;
+		}
 	}
 	.elementor-testimonial__text{
 		color:white;
@@ -724,14 +745,16 @@ body{
 	.elementor-tab-content{
 		border:none!important;
 		background-color: transparent!important;
+		font-size: 14px;
 	}
 	.elementor-toggle-title{
 		font-size: 16px;
 		margin-right: 40px;
+		margin-left: 120px;
 		font-weight: normal;
 		font-stretch: normal;
 		font-style: normal;
-		line-height: 2.13;
+		line-height: 1;
 		letter-spacing: normal;
 		text-align: right;
 		padding-top: 30px;
@@ -768,10 +791,21 @@ body{
 	border-bottom-right-radius:0px;
 	&:before{
 		position: absolute;
+		background-size: cover!important;
 		height: 1400px;
-		top:-10px;
-		left:-4%;
+		top:-11px;
+		left:-60px;
 		margin-left: 1px;
+		@include bp(M){
+			border-radius: 51.4px;
+			background-size: contain!important;
+			left:-37px;
+			top:-10px
+		}
+		@include bp(S){
+			left:-4%;
+
+		}
 	}
 	.core-section{
 		// padding-top: 50px;
@@ -795,6 +829,11 @@ body{
 				top:50%;
 				transform:translateY(-50%);
 				max-width: 662px;
+				@include bp(S){
+					position: relative;
+					top:auto;
+					transform: translateY(0);
+				}
 
 			}
 			.content-box{
@@ -818,8 +857,17 @@ body{
 			.plus-wrapper{
 				display: flex;
 				align-items: center;
+				@include bp(M){
+					flex-direction: column;
+				}
 				.plus-container{
 					min-width: 200px;
+					margin-bottom: 10px;
+					@include bp(M){
+						display: flex;
+						flex-direction: row;
+						flex-wrap: wrap;
+					}
 				}
 				p{
 					font-family: SatoshiVariable;
@@ -913,7 +961,7 @@ body{
 .discomfort{
 	padding: toRem(140) 0;
 	position: relative; 
-	border-top: solid 2.1px #2b2b2d;
+	border-top: solid 1px #2b2b2d;
 	.alive{
 		.elementor-widget-image{
 			margin-top: toRem(37);
@@ -952,13 +1000,20 @@ body{
 
 .cooth-block{
 	max-width: 1200px;
-	width: 85%;
+	width: 95%;
 	margin: toRem(40) auto;
+	justify-content: space-around;
+
+	.e-con{
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 
 	.tan-block{
 		background-color: #f9f3ef;
 		display: flex;
 		height:170px;
+		width:170px;
 		justify-content: center;
 		align-items: center;
 	}
@@ -1032,6 +1087,9 @@ body{
 .full-width-inner{
 	&-left {
 	max-width: 42%;
+	@include bp(S){
+		max-width:90%;
+	}
 	.e-con-full{
 			padding: toRem(140) 0;
 		width: 80%;
@@ -1039,6 +1097,9 @@ body{
 		margin-left: auto;
 		// padding-left: 10%;
 		max-width: 600px;
+		@include bp(S){
+			margin-left: 0;
+		}
 	}
 }
 	&-right .e-con-full{
@@ -1071,13 +1132,26 @@ body{
 .startup{
 	padding-bottom:toRem(40);
 	margin-bottom: toRem(200);
+	// .flourish-eco{
+	// 	position: absolute;
+  //   width: 100%;
+  //   top: -28px;
+  //   right: 11%;
+	// }
 	&:before{
-		top: -37px;
-    background-size: 70% auto !important;
-    left: 24px;
+    top: -53px;
+    background-size: 70% !important;
+    left: 34px;
     z-index: 10;
-		background-position: left top;
-	}
+    background-position: left top;
+		@include bp(S){
+			top: 0px;
+			left:0;
+			background-position: contain!important;
+		}
+}
+	
+
 	.logo-grid{
 		margin:auto;
 	}
@@ -1091,6 +1165,7 @@ body{
 		}
 	}
 }
+
 .work-with.partners{
 	margin-bottom: toRem(50);
 	.e-con-full{
@@ -1104,6 +1179,11 @@ body{
     right: 0;
     left: auto!important;
     background-position: right top;
+		@include bp(S){
+			background-size: contain!important;
+			top: -210px!important;
+		}
+
 }
 .full-width-inner-right{
 	margin:auto;
@@ -1114,8 +1194,9 @@ body{
 	.pic{
 		&:before{
 			top:auto;
-			bottom:-150px;
+			bottom:-190px;
 			background-size: 300px auto;
+			z-index: 100;
 		}
 
 		.text-width{

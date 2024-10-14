@@ -388,6 +388,11 @@ body {
   margin: 3.125rem auto;
 }
 
+.small-space-no-side {
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+}
+
 .simple-padding-bottom {
   margin-bottom: 6.25rem !important;
 }
@@ -473,8 +478,12 @@ body {
   color: white;
 }
 
-.owl-card .toggle-class {
-  display: none;
+.owl-card .same-space {
+  margin: 3.125rem auto;
+}
+
+.owl-card .elementor-counter .elementor-counter-title {
+  flex: 1 !important;
 }
 
 .owl-card .toggle-click.active .elementor-icon {
@@ -522,7 +531,7 @@ body {
 
 .owl-carousel {
   overflow: hidden;
-  border-radius: 85.1px;
+  border-radius: 25px;
   background-color: #191919;
 }
 
@@ -719,6 +728,7 @@ body {
   margin-top: auto;
   margin-bottom: 18.75rem;
   max-width: 851px;
+  width: 85%;
 }
 
 .hero .content-box .copy {
@@ -761,7 +771,6 @@ body {
 .scroll-section-wrapper {
   max-height: 600px;
   padding-top: 4.5625rem;
-  padding-bottom: 4.5625rem;
   margin-bottom: 2.25rem;
 }
 
@@ -777,7 +786,7 @@ body {
   bottom: 0;
   z-index: 100;
   width: 100%;
-  height: 18.75rem;
+  height: 12.5rem;
 }
 
 .scroll-section .button {
@@ -990,8 +999,8 @@ body {
   padding-left: 15px !important;
 }
 
-.slider.elementor-widget-testimonial-carousel .elementor-testimonial .pill:before {
-  height: 0.7em;
+.slider:not(.home).elementor-widget-testimonial-carousel .elementor-testimonial .pill:before {
+  height: 1em;
   bottom: 40%;
 }
 
@@ -1372,15 +1381,17 @@ body {
 .toggle-content .elementor-tab-content {
   border: none !important;
   background-color: transparent !important;
+  font-size: 14px;
 }
 
 .toggle-content .elementor-toggle-title {
   font-size: 16px;
   margin-right: 40px;
+  margin-left: 120px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 2.13;
+  line-height: 1;
   letter-spacing: normal;
   text-align: right;
   padding-top: 30px;
@@ -1419,9 +1430,10 @@ body {
 
 .purpose:before {
   position: absolute;
+  background-size: cover !important;
   height: 1400px;
-  top: -10px;
-  left: -4%;
+  top: -11px;
+  left: -60px;
   margin-left: 1px;
 }
 
@@ -1474,6 +1486,7 @@ body {
 
 .butter-wrapper .e-con-inner .bread .plus-wrapper .plus-container {
   min-width: 200px;
+  margin-bottom: 10px;
 }
 
 .butter-wrapper .e-con-inner .bread .plus-wrapper p {
@@ -1549,7 +1562,7 @@ body {
 .discomfort {
   padding: 8.75rem 0;
   position: relative;
-  border-top: solid 2.1px #2b2b2d;
+  border-top: solid 1px #2b2b2d;
 }
 
 .discomfort .alive .elementor-widget-image {
@@ -1588,14 +1601,21 @@ body {
 
 .cooth-block {
   max-width: 1200px;
-  width: 85%;
+  width: 95%;
   margin: 2.5rem auto;
+  justify-content: space-around;
+}
+
+.cooth-block .e-con {
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cooth-block .tan-block {
   background-color: #f9f3ef;
   display: flex;
   height: 170px;
+  width: 170px;
   justify-content: center;
   align-items: center;
 }
@@ -1701,9 +1721,9 @@ body {
 }
 
 .startup:before {
-  top: -37px;
-  background-size: 70% auto !important;
-  left: 24px;
+  top: -53px;
+  background-size: 70% !important;
+  left: 34px;
   z-index: 10;
   background-position: left top;
 }
@@ -1747,8 +1767,9 @@ body {
 
 .work-with.partners .pic:before {
   top: auto;
-  bottom: -150px;
+  bottom: -190px;
   background-size: 300px auto;
+  z-index: 100;
 }
 
 .work-with.partners .pic .text-width {
@@ -1801,6 +1822,10 @@ body {
     font-size: 0.9rem;
   }
 
+  .counter-grid.right {
+    margin-left: 0;
+  }
+
   html {
     font-size: 0.7rem;
   }
@@ -1817,6 +1842,23 @@ body {
     padding-left: 20px;
   }
 
+  .purpose:before {
+    border-radius: 51.4px;
+    background-size: contain !important;
+    left: -37px;
+    top: -10px;
+  }
+
+  .butter-wrapper .e-con-inner .bread .plus-wrapper {
+    flex-direction: column;
+  }
+
+  .butter-wrapper .e-con-inner .bread .plus-wrapper .plus-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .elementor-widget-testimonial .pill:before {
     height: 100%;
     width: 100%;
@@ -1826,6 +1868,10 @@ body {
 @media (max-width: 767px) {
   html {
     font-size: 0.8rem;
+  }
+
+  .pill:before {
+    height: 100%;
   }
 
   .headline-1 h1,
@@ -1851,5 +1897,39 @@ body {
 
   .list {
     padding-top: 50px;
+  }
+
+  .testimonal:before {
+    margin-left: 0;
+    top: -47px;
+  }
+
+  .purpose:before {
+    left: -4%;
+  }
+
+  .butter-wrapper .e-con-inner .bread-butter-grid .elementor-widget-image {
+    position: relative;
+    top: auto;
+    transform: translateY(0);
+  }
+
+  .full-width-inner-left {
+    max-width: 90%;
+  }
+
+  .full-width-inner-left .e-con-full {
+    margin-left: 0;
+  }
+
+  .startup:before {
+    top: 0px;
+    left: 0;
+    background-position: contain !important;
+  }
+
+  .work-with.partners:before {
+    background-size: contain !important;
+    top: -210px !important;
   }
 }

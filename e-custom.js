@@ -90,6 +90,7 @@ jQuery(function ($) {
 			center: true,
 			autoplay: false,
 			dots:false,
+			autoHeight: true,
 			nav: true,
 			URLhashListener:true,
 			startPosition: 'URLHash',

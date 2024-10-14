@@ -97,6 +97,10 @@ body {
 .small-space{
 	margin: toRem(50) auto;
 }
+.small-space-no-side{
+	margin-top: toRem(50);
+	margin-bottom: toRem(50);
+}
 .simple-padding-bottom{
 	margin-bottom: toRem(100)!important;
 

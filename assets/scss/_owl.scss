@@ -3,10 +3,17 @@
 	display: flex;
 }
 .owl-card{
+	.same-space{
+		margin:toRem(50) auto;
+
+	}
+	.elementor-counter .elementor-counter-title{
+		flex:1!important;
+	}
 	.toggle-class{
 		// display: none;
 		// visibility: hidden;
-		display: none;
+		// display: none;
 	}
 	.toggle-click{
 		&.active{
@@ -55,7 +62,7 @@
 }
 .owl-carousel{
 	overflow: hidden;
-	border-radius: 85.1px;
+	border-radius: 25px;
 	background-color: #191919;
 	.liked-popup{
 		position: absolute;
@@ -148,6 +155,9 @@
 .counter-grid{
 	&.right{
 		margin-left: 10%;
+		@include bp(M){
+			margin-left: 0;
+		}
 	}
 }
 .counter{
