@@ -7,6 +7,22 @@
 @import 'owl';
 
 
+html {
+	font-size: 1rem;
+	// @media (max-width: 1380px) {
+	// 	font-size: 0.88rem;
+	// }
+	// @include bp(desktop) {
+	// 	font-size: 0.8rem;
+	// }
+	@include bp(M) {
+		font-size: 0.7rem;
+	}
+	@include bp(S) {
+		font-size: 0.55rem;
+	}
+}
+
 // width: 1337px;
 body{
 	overflow-x: hidden;
@@ -37,7 +53,10 @@ body{
 	}
 }
 .hero{
-	height: toRem(1009);
+	// height: toRem(1009);
+	height: 100%;
+	// background-position: 24px 0px!important;
+
 	.pill{
 		&:before{
 			content:'';
@@ -77,8 +96,8 @@ body{
 		border-radius: 20.4px;
 		&:before{
 			position: absolute;
-			left: -20px;
-			top:-2vh;
+			left: -60px;
+			top:-68px;
 		}
 	}
 }
@@ -107,7 +126,7 @@ body{
 			bottom: 0;
 			z-index: 100;
 			width: 100%;
-			height:200px;
+			height:toRem(300);
 		}
 	}
 	.button{
@@ -144,6 +163,9 @@ body{
 			position: absolute;
 			left:toRem(-90*2.5);
 			top:toRem(-90*2.5);
+			@include bp(S){
+				left:-100px;
+			}
 		}
 	}
 	.copy.e-con{
@@ -151,6 +173,10 @@ body{
 		padding: toRem(90);
 		box-sizing: content-box;
 		padding-right: 0;
+		@include bp(M){
+			box-sizing: border-box;
+
+		}
 		&:before{
 			position: absolute;
 			// bottom: 0;
@@ -160,7 +186,9 @@ body{
 		}
 		.heading-4,
 		.copy{
+			// max-width: toRem(520);
 			max-width: 520px;
+			width: 90%;
 		}
 		// max-width: 473px;
 		.elementor-element{
@@ -176,6 +204,12 @@ body{
 		top: -87px - 90px;
 		// left:toRem(100);
 		left:15%;
+		@include bp(M) {
+			top:-123px;
+		}
+		@include bp(S){
+			top:-97px;
+		}
 		img{
 			max-width: toRem(190);
 			top: - toRem(95);
@@ -185,7 +219,13 @@ body{
 
 .list{
 	// margin-top: toRem(-50);
-	padding-left: toRem(90 * 2);
+	padding-left: toRem(160);
+	@include bp(M){
+		padding-left: 20px;
+	}
+	@include bp(S){
+		padding-top: 50px;
+	}
 	&.horiztonal{
 		padding-left: 0;
 	}
@@ -218,7 +258,15 @@ body{
 			}
 			.elementor-counter-title{
 				flex: none;
+				flex:auto;
+				flex-wrap: wrap;
+				// align-items: flex-end;
+				justify-content:start;
 				margin-left: 20px;
+				@include bp(M){
+
+
+				}
 			}
 			.elementor-counter-number-suffix{
 				font-weight: 300;
@@ -263,12 +311,23 @@ body{
 		}
 	}
 .hover-item{
-	width: 375px;
+	max-width: 375px;
 	justify-content: center;
 	align-items: center;
-  height: 375px;
+  min-height: 375px;
+	height: 100%;
+	width: 100%;
 	&:before{
 		background-color: $dark-gray!important;
+	}
+	&:after{
+		opacity: 0;
+		content:'';
+		background-color: #2c3e93;
+
+		height: 100%;
+    width: 100%;
+    position: absolute;
 	}
 	img{
 		max-width: 182px;
@@ -285,6 +344,9 @@ body{
 		margin: auto;
 	}
 	&:hover{
+		&:after{
+			opacity: 0.5;
+		}
 		&:before{
 			opacity: 0;
 		}
@@ -295,7 +357,7 @@ body{
 }	
 }
 .slider.elementor-widget-testimonial-carousel .elementor-testimonial{
-	padding-left: 5px!important;
+	padding-left: 15px!important;
 	.pill{
 		&:before{
 			height: 0.7em;
@@ -321,6 +383,7 @@ body{
 			left:auto;
 			transform:none;
 			bottom:toRem(-193);
+			background-size: contain!important;
 		}
 		.swiper-pagination-bullet{
 			border:1px solid black;
@@ -374,6 +437,7 @@ body{
 		transform: translateX(-50%);
 		margin-left: 70px;
 		top:-70px;
+		background-size: 30% auto!important;
 	}
 	.elementor-testimonial__text{
 		color:white;
@@ -687,8 +751,8 @@ body{
 	&:after{
 		content: '';
 		position: absolute;
-		bottom: -190px;
-		left: -155px;
+		bottom: -192px;
+		left: -159px;
 		width: 607px;
 		height:600px;
 		// height: auto;
@@ -706,7 +770,8 @@ body{
 		position: absolute;
 		height: 1400px;
 		top:-10px;
-		left:-56px;
+		left:-4%;
+		margin-left: 1px;
 	}
 	.core-section{
 		// padding-top: 50px;
@@ -753,6 +818,9 @@ body{
 			.plus-wrapper{
 				display: flex;
 				align-items: center;
+				.plus-container{
+					min-width: 200px;
+				}
 				p{
 					font-family: SatoshiVariable;
 					font-size: 16px;
@@ -779,23 +847,58 @@ body{
 
 // butter-wrapper
 
+.elementor-widget-testimonial{
+	.content{
+		z-index: 1;
+	}
+	.elementor-testimonial-details{
+		display: flex;
+		font-size: 12px;
+		.elementor-testimonial-name{
+			font-weight: 900;
+			font-stretch: normal;
+			font-style: normal;
+		}
+		.elementor-testimonial-job{
 
+		}
+
+	}
+	.pill{
+		z-index: -1;
+		margin-right: 12px;
+		@include bp(M){
+			&:before{
+				height: 100%;
+				width: 100%;
+			}
+
+		}
+	}
+	
+}
 .build-with-us-testi{
 	padding-top: toRem(100);
 	padding-bottom: toRem(100);
+	z-index: -2;
 	&:before{
 		position: absolute;
 		width:300px;
 		right:0;
 		left: auto;
 		top:-60px;
+		z-index: -1;
 	}
 	.elementor-widget-testimonial{
+
 		padding-top: toRem(50);
 		padding-bottom: toRem(50);
 		.elementor-testimonial-content{
+			// max-width: 700px;
+			width: 70%;
 			font-size: toRem(36);
 			font-weight: 500;
+			padding-left: 15px;
 			font-stretch: normal;
 			font-style: normal;
 			line-height: normal;
@@ -963,4 +1066,98 @@ body{
 	display: inline-block;
 	font-size: 10px;
 
+}
+
+.startup{
+	padding-bottom:toRem(40);
+	margin-bottom: toRem(200);
+	&:before{
+		top: -37px;
+    background-size: 70% auto !important;
+    left: 24px;
+    z-index: 10;
+		background-position: left top;
+	}
+	.logo-grid{
+		margin:auto;
+	}
+	.kick-it{
+		&:before{
+			right: auto;
+			left: -8px;
+			bottom: 0;
+			background-position: left bottom !important;
+			background-size: auto 400px !important;
+		}
+	}
+}
+.work-with.partners{
+	margin-bottom: toRem(50);
+	.e-con-full{
+		padding:0px;
+	}
+	padding: 0!important;
+	&:before{
+		// background-size: 500px auto;
+		background-size: 850px auto !important;
+    top: -310px!important;
+    right: 0;
+    left: auto!important;
+    background-position: right top;
+}
+.full-width-inner-right{
+	margin:auto;
+	.elementor-widget-text-editor{
+	margin-bottom: toRem(70)!important;
+}
+	}
+	.pic{
+		&:before{
+			top:auto;
+			bottom:-150px;
+			background-size: 300px auto;
+		}
+
+		.text-width{
+			margin-left: toRem(70)!important;
+			width: 60%!important;
+			margin-top: toRem(60);
+		}
+	}
+}
+
+.trustc{
+	margin-bottom: 0!important;
+	&:before{
+		top:toRem(90);
+    left: 160px;
+
+    background-position: top left;
+    background-size: auto 540px !important;
+    z-index: 10;
+	}
+	.dreamers{
+		overflow: visible;
+		border-top-left-radius: 30px;
+		padding-top: toRem(70);
+		padding-bottom: toRem(70);
+		.heading-4 {
+			margin-right: -100px;
+			margin-left: 66px;
+	
+		}
+	}
+	background-color: #2b2b2d;
+	.text-width{
+		margin:auto!important;
+		width: 60%!important;
+		margin-left: toRem(70)!important;
+		padding:0;
+	}
+	.button-group{
+		margin: 0;
+		width: 100%;
+		max-width: auto;
+		padding:toRem(50) 0;
+	}
 }

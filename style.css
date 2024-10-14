@@ -20,6 +20,10 @@ h1 .pill {
   z-index: -1;
 }
 
+.elementor-counter .elementor-counter-title {
+  line-height: 1;
+}
+
 .pill {
   position: relative;
   display: inline-block;
@@ -62,11 +66,11 @@ h1 .pill {
 }
 
 .elementor-button {
-  min-width: 227px;
+  min-width: 14.1875rem;
   font-weight: bold;
   --e-global-typography-accent-font-weight: bold;
-  font-size: 20px;
-  padding: 18px 50px !important;
+  font-size: 1.25rem !important;
+  padding: 1.125rem 3.125rem !important;
 }
 
 .button.yellowoutline {
@@ -83,6 +87,10 @@ h1 .pill {
   background-color: white;
   border-color: white;
   color: black;
+}
+
+.button.outline.black a:hover {
+  border: 1px solid black;
 }
 
 .button.white a {
@@ -259,8 +267,8 @@ p em {
 .hero-mode-toggle .slider:before {
   position: absolute;
   content: "";
-  height: 13px;
-  width: 13px;
+  height: 12px;
+  width: 12px;
   left: 2px;
   bottom: 2px;
   background-color: #2b2b2d;
@@ -303,8 +311,34 @@ body {
   flex-grow: 0 !important;
 }
 
+.elementor-button:hover {
+  cursor: pointer;
+}
+
 #Nav {
-  height: 90px;
+  height: 140px;
+}
+
+#Nav .elementor-button:after {
+  display: none;
+}
+
+#Nav .elementor-button a:hover {
+  line-height: 1;
+  color: black;
+}
+
+#Nav .elementor-button a:after {
+  display: none;
+}
+
+#Nav .menu-item {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#Nav .menu-item:hover a:after {
+  display: none;
 }
 
 #Nav .elementor-item {
@@ -398,7 +432,7 @@ body {
 .brand-list li:before {
   position: absolute;
   left: -1.2em;
-  bottom: 0.3em;
+  top: 0.3em;
   content: " ";
   display: block;
   width: 9px;
@@ -638,6 +672,10 @@ body {
   color: #2b2b2d;
 }
 
+html {
+  font-size: 1rem;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -669,7 +707,7 @@ body {
 }
 
 .hero {
-  height: 63.0625rem;
+  height: 100%;
 }
 
 .hero .pill:before {
@@ -710,8 +748,8 @@ body {
 
 .home-blf .go-foward:before {
   position: absolute;
-  left: -20px;
-  top: -2vh;
+  left: -60px;
+  top: -68px;
 }
 
 .scroll-section {
@@ -739,7 +777,7 @@ body {
   bottom: 0;
   z-index: 100;
   width: 100%;
-  height: 200px;
+  height: 18.75rem;
 }
 
 .scroll-section .button {
@@ -801,6 +839,7 @@ body {
 .pudding .copy.e-con .heading-4,
 .pudding .copy.e-con .copy {
   max-width: 520px;
+  width: 90%;
 }
 
 .pudding .copy.e-con .heading-4 {
@@ -820,7 +859,7 @@ body {
 }
 
 .list {
-  padding-left: 11.25rem;
+  padding-left: 10rem;
 }
 
 .list.horiztonal {
@@ -848,6 +887,9 @@ body {
 
 .list .e-grid .elementor-widget-counter .elementor-counter-title {
   flex: none;
+  flex: auto;
+  flex-wrap: wrap;
+  justify-content: start;
   margin-left: 20px;
 }
 
@@ -895,14 +937,25 @@ body {
 }
 
 .hover-grid-container .hover-item {
-  width: 375px;
+  max-width: 375px;
   justify-content: center;
   align-items: center;
-  height: 375px;
+  min-height: 375px;
+  height: 100%;
+  width: 100%;
 }
 
 .hover-grid-container .hover-item:before {
   background-color: black !important;
+}
+
+.hover-grid-container .hover-item:after {
+  opacity: 0;
+  content: "";
+  background-color: #2c3e93;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .hover-grid-container .hover-item img {
@@ -921,6 +974,10 @@ body {
   margin: auto;
 }
 
+.hover-grid-container .hover-item:hover:after {
+  opacity: 0.5;
+}
+
 .hover-grid-container .hover-item:hover:before {
   opacity: 0;
 }
@@ -930,7 +987,7 @@ body {
 }
 
 .slider.elementor-widget-testimonial-carousel .elementor-testimonial {
-  padding-left: 5px !important;
+  padding-left: 15px !important;
 }
 
 .slider.elementor-widget-testimonial-carousel .elementor-testimonial .pill:before {
@@ -959,6 +1016,7 @@ body {
   left: auto;
   transform: none;
   bottom: -12.0625rem;
+  background-size: contain !important;
 }
 
 .testimonal.white .swiper-pagination-bullet {
@@ -1022,6 +1080,7 @@ body {
   transform: translateX(-50%);
   margin-left: 70px;
   top: -70px;
+  background-size: 30% auto !important;
 }
 
 .testimonal .elementor-testimonial__text {
@@ -1350,8 +1409,8 @@ body {
 .purpose:after {
   content: "";
   position: absolute;
-  bottom: -190px;
-  left: -155px;
+  bottom: -192px;
+  left: -159px;
   width: 607px;
   height: 600px;
   background-size: contain;
@@ -1362,7 +1421,8 @@ body {
   position: absolute;
   height: 1400px;
   top: -10px;
-  left: -56px;
+  left: -4%;
+  margin-left: 1px;
 }
 
 .butter-wrapper {
@@ -1412,6 +1472,10 @@ body {
   border-bottom: solid 0.5px #f9f3ef;
 }
 
+.butter-wrapper .e-con-inner .bread .plus-wrapper .plus-container {
+  min-width: 200px;
+}
+
 .butter-wrapper .e-con-inner .bread .plus-wrapper p {
   font-family: SatoshiVariable;
   font-size: 16px;
@@ -1429,9 +1493,30 @@ body {
   height: 62px;
 }
 
+.elementor-widget-testimonial .content {
+  z-index: 1;
+}
+
+.elementor-widget-testimonial .elementor-testimonial-details {
+  display: flex;
+  font-size: 12px;
+}
+
+.elementor-widget-testimonial .elementor-testimonial-details .elementor-testimonial-name {
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+}
+
+.elementor-widget-testimonial .pill {
+  z-index: -1;
+  margin-right: 12px;
+}
+
 .build-with-us-testi {
   padding-top: 6.25rem;
   padding-bottom: 6.25rem;
+  z-index: -2;
 }
 
 .build-with-us-testi:before {
@@ -1440,6 +1525,7 @@ body {
   right: 0;
   left: auto;
   top: -60px;
+  z-index: -1;
 }
 
 .build-with-us-testi .elementor-widget-testimonial {
@@ -1448,8 +1534,10 @@ body {
 }
 
 .build-with-us-testi .elementor-widget-testimonial .elementor-testimonial-content {
+  width: 70%;
   font-size: 2.25rem;
   font-weight: 500;
+  padding-left: 15px;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -1607,20 +1695,161 @@ body {
   font-size: 10px;
 }
 
-@media (max-width: 1170px) {
-  html {
-    font-size: 0.9rem;
-  }
+.startup {
+  padding-bottom: 2.5rem;
+  margin-bottom: 12.5rem;
+}
+
+.startup:before {
+  top: -37px;
+  background-size: 70% auto !important;
+  left: 24px;
+  z-index: 10;
+  background-position: left top;
+}
+
+.startup .logo-grid {
+  margin: auto;
+}
+
+.startup .kick-it:before {
+  right: auto;
+  left: -8px;
+  bottom: 0;
+  background-position: left bottom !important;
+  background-size: auto 400px !important;
+}
+
+.work-with.partners {
+  margin-bottom: 3.125rem;
+  padding: 0 !important;
+}
+
+.work-with.partners .e-con-full {
+  padding: 0px;
+}
+
+.work-with.partners:before {
+  background-size: 850px auto !important;
+  top: -310px !important;
+  right: 0;
+  left: auto !important;
+  background-position: right top;
+}
+
+.work-with.partners .full-width-inner-right {
+  margin: auto;
+}
+
+.work-with.partners .full-width-inner-right .elementor-widget-text-editor {
+  margin-bottom: 4.375rem !important;
+}
+
+.work-with.partners .pic:before {
+  top: auto;
+  bottom: -150px;
+  background-size: 300px auto;
+}
+
+.work-with.partners .pic .text-width {
+  margin-left: 4.375rem !important;
+  width: 60% !important;
+  margin-top: 3.75rem;
+}
+
+.trustc {
+  margin-bottom: 0 !important;
+  background-color: #2b2b2d;
+}
+
+.trustc:before {
+  top: 5.625rem;
+  left: 160px;
+  background-position: top left;
+  background-size: auto 540px !important;
+  z-index: 10;
+}
+
+.trustc .dreamers {
+  overflow: visible;
+  border-top-left-radius: 30px;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+
+.trustc .dreamers .heading-4 {
+  margin-right: -100px;
+  margin-left: 66px;
+}
+
+.trustc .text-width {
+  margin: auto !important;
+  width: 60% !important;
+  margin-left: 4.375rem !important;
+  padding: 0;
+}
+
+.trustc .button-group {
+  margin: 0;
+  width: 100%;
+  max-width: auto;
+  padding: 3.125rem 0;
 }
 
 @media (max-width: 1024px) {
   html {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  html {
+    font-size: 0.7rem;
+  }
+
+  .pudding .copy.e-con {
+    box-sizing: border-box;
+  }
+
+  .pudding .floating-image {
+    top: -123px;
+  }
+
+  .list {
+    padding-left: 20px;
+  }
+
+  .elementor-widget-testimonial .pill:before {
+    height: 100%;
+    width: 100%;
   }
 }
 
 @media (max-width: 767px) {
   html {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .headline-1 h1,
+  .headline-1 h2,
+  .headline-1 h3,
+  .headline-1 h4,
+  .headline-1 h5,
+  .headline-1 h6 {
+    line-height: 1.2;
+  }
+
+  html {
+    font-size: 0.55rem;
+  }
+
+  .pudding .side-figure:before {
+    left: -100px;
+  }
+
+  .pudding .floating-image {
+    top: -97px;
+  }
+
+  .list {
+    padding-top: 50px;
   }
 }
