@@ -98,6 +98,17 @@ jQuery(function ($) {
 			mouseDrag: false,
 			animateOut: 'fadeOut',
 			animateIn: 'fadeIn',
+			responsive:
+			{
+							0: {
+									items:1,
+							autoHeight: true
+							},
+							768: {
+											items:1,
+							autoHeight: true
+							}
+			}
 		};
 
 		const toggleInput = $('.hero-mode-toggle input');
@@ -120,6 +131,15 @@ jQuery(function ($) {
 	}
 
 		owlCard.owlCarousel(owlOptions);
+		owlCard.on('resized.owl.carousel', function (event) {
+			// setOwlHeight();
+			})
+			
+			owlCard.on('translated.owl.carousel', function (event) {
+			//....
+			// setOwlHeight();
+			})
+
 
 		$('.owl-nav').wrap(`<div class='controls' />`)
 		$('.liked-popup').each(function () {

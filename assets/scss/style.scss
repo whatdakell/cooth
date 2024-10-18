@@ -63,6 +63,9 @@ body{
 			padding: 0 toRem(35);
 		}
 	}
+	.button {
+		// border:1px solid black;
+	}
 	.content-box{
 		margin-top: auto;
 		margin-bottom: toRem(300);
@@ -1139,9 +1142,9 @@ body{
   //   right: 11%;
 	// }
 	&:before{
-    top: -53px;
+    top: -126px;
     background-size: 70% !important;
-    left: 34px;
+    left: 45px;
     z-index: 10;
     background-position: left top;
 		@include bp(S){
@@ -1174,8 +1177,8 @@ body{
 	padding: 0!important;
 	&:before{
 		// background-size: 500px auto;
-		background-size: 850px auto !important;
-    top: -310px!important;
+		background-size: 1200px auto !important;
+    top: -460px!important;
     right: 0;
     left: auto!important;
     background-position: right top;
@@ -1211,7 +1214,7 @@ body{
 	margin-bottom: 0!important;
 	&:before{
 		top:toRem(90);
-    left: 160px;
+    left: 475px;
 
     background-position: top left;
     background-size: auto 540px !important;

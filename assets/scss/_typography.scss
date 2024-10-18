@@ -69,11 +69,27 @@ h1 .pill{
 	font-size: toRem(20)!important;
 	padding: toRem(18) toRem(50)!important;
 }
+.text-width{
+	z-index: 10;
+}
 .button{
+
 	&.yellowoutline{
+		a{
+			border: none!important;
+		}
 		border: 1px solid $yellow;
+		a{
+			color:white;
+		}
+		&:hover{
+			background-color:$yellow!important;
+			border-color:$yellow!important;
+			color:white!important;
+
+		}
 	}
-	&.black a{
+	&.black:not(.yellowoutline) a{
 		background-color: black;
 		// border-color: $yellow;
 		border-color: black;

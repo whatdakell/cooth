@@ -73,17 +73,35 @@ h1 .pill {
   padding: 1.125rem 3.125rem !important;
 }
 
+.text-width {
+  z-index: 10;
+}
+
 .button.yellowoutline {
   border: 1px solid #ffca45;
 }
 
-.button.black a {
+.button.yellowoutline a {
+  border: none !important;
+}
+
+.button.yellowoutline a {
+  color: white;
+}
+
+.button.yellowoutline:hover {
+  background-color: #ffca45 !important;
+  border-color: #ffca45 !important;
+  color: white !important;
+}
+
+.button.black:not(.yellowoutline) a {
   background-color: black;
   border-color: black;
   color: white;
 }
 
-.button.black a:hover {
+.button.black:not(.yellowoutline) a:hover {
   background-color: white;
   border-color: white;
   color: black;
@@ -319,6 +337,10 @@ body {
   height: 140px;
 }
 
+#Nav .e-con-inner {
+  align-items: center;
+}
+
 #Nav .elementor-button:after {
   display: none;
 }
@@ -471,6 +493,27 @@ body {
   display: flex;
 }
 
+.popup-contiain .dialog-widget-content {
+  border: 1px solid #92907d;
+  border-radius: 30px;
+}
+
+.popup-contiain .popup-liked {
+  padding: 4rem;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.popup-contiain .popup-liked .copy {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.popup-contiain .popup-liked .copy p {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .owl-card {
   padding: 6.25rem 4.375rem;
   border-radius: 85.1px;
@@ -478,8 +521,19 @@ body {
   color: white;
 }
 
+.owl-card .logo img {
+  max-height: 50px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3.125rem;
+}
+
 .owl-card .same-space {
   margin: 3.125rem auto;
+}
+
+.owl-card a {
+  color: green;
 }
 
 .owl-card .elementor-counter .elementor-counter-title {
@@ -658,7 +712,7 @@ body {
   width: 95px;
   height: 95px;
   border-radius: 100%;
-  font-size: 24px;
+  font-size: 1.25rem;
   font-weight: 900;
   flex: none;
   justify-content: center;
@@ -1721,9 +1775,9 @@ body {
 }
 
 .startup:before {
-  top: -53px;
+  top: -126px;
   background-size: 70% !important;
-  left: 34px;
+  left: 45px;
   z-index: 10;
   background-position: left top;
 }
@@ -1750,8 +1804,8 @@ body {
 }
 
 .work-with.partners:before {
-  background-size: 850px auto !important;
-  top: -310px !important;
+  background-size: 1200px auto !important;
+  top: -460px !important;
   right: 0;
   left: auto !important;
   background-position: right top;
@@ -1785,7 +1839,7 @@ body {
 
 .trustc:before {
   top: 5.625rem;
-  left: 160px;
+  left: 475px;
   background-position: top left;
   background-size: auto 540px !important;
   z-index: 10;

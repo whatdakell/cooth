@@ -2,10 +2,42 @@
 .owl-stage{
 	display: flex;
 }
+.popup-contiain{
+	.dialog-widget-content{
+		border:1px solid #92907d;
+
+		border-radius: 30px;
+
+	}
+	.popup-liked {
+		padding:4rem;
+		text-align: center;
+
+		border-radius: 30px;
+		.copy {
+			margin-top: 3rem;
+			margin-bottom: 1rem;
+			p{
+				margin-bottom: 2rem;
+				text-align: center;
+			}
+		}
+
+	}
+}
 .owl-card{
+	.logo img{
+		max-height: 50px;
+		width: 100%;
+		height: 100%;
+		margin-bottom: toRem(50);
+	}
 	.same-space{
 		margin:toRem(50) auto;
 
+	}
+	a{
+		color:green;
 	}
 	.elementor-counter .elementor-counter-title{
 		flex:1!important;
@@ -186,7 +218,7 @@
 			width: 95px;
 			height: 95px;
 			border-radius: 100%;
-			font-size: 24px;
+			font-size: toRem(20);
 			font-weight: 900;
 			flex: none;
 			justify-content: center;
