@@ -95,6 +95,10 @@ h1 .pill {
   color: white !important;
 }
 
+.button a {
+  width: 100%;
+}
+
 .button.black:not(.yellowoutline) a {
   background-color: black;
   border-color: black;
@@ -1028,6 +1032,8 @@ body {
 
 .hover-grid-container .text-item {
   text-align: right;
+  max-width: 375px;
+  margin: auto;
 }
 
 .hover-grid-container .text-item .heading-4 {
@@ -1046,6 +1052,7 @@ body {
   height: 100%;
   background-size: cover !important;
   width: 100%;
+  margin: auto;
 }
 
 .hover-grid-container .hover-item:before {
@@ -1197,11 +1204,11 @@ body {
 
 .testimonal .elementor-testimonial__text {
   color: white;
-  font-size: 2.25rem;
-  font-weight: 500;
+  font-size: 2.25rem !important;
+  font-weight: 500 !important;
   font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
+  font-style: normal !important;
+  line-height: normal !important;
   letter-spacing: -1.08px;
 }
 
@@ -1783,6 +1790,23 @@ body {
   width: 90%;
 }
 
+.work-with .kick-it:after {
+  content: "";
+  background-image: url("../../uploads/2024/10/abstract-component-top-left.png");
+  --background-overlay: "";
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 900px;
+  background-repeat: no-repeat;
+  width: 1100px;
+  background-size: contain;
+  height: 400px;
+  top: -174px;
+  left: -626px;
+  background-position: top left;
+  position: absolute;
+}
+
 .work-with .kick-it:before {
   position: absolute;
   top: auto;
@@ -1928,6 +1952,31 @@ body {
   z-index: 10;
 }
 
+.trustc .full-width-inner-left {
+  padding-right: 0;
+}
+
+.trustc .pic {
+  position: relative;
+}
+
+.trustc .pic:before {
+  background-image: url("../../uploads/2024/10/Asset-88@2x.png");
+  --background-overlay: "";
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  background-size: contain;
+  content: "";
+  position: absolute;
+  background-size: contain;
+  width: 1222px;
+  left: -343px;
+  top: -9px;
+  height: 541px;
+  background-position: top left;
+}
+
 .trustc .dreamers {
   overflow: visible;
   border-top-left-radius: 30px;
@@ -2008,6 +2057,10 @@ body {
     width: 100%;
   }
 
+  .work-with .kick-it:after {
+    left: -627px;
+  }
+
   .startup .flourish-wrapper:before {
     margin-left: 17px;
   }
@@ -2062,6 +2115,14 @@ body {
 
   .list {
     padding-top: 50px;
+  }
+
+  .hover-grid-container .text-item {
+    padding-bottom: 40px;
+  }
+
+  .hover-grid-container .text-item .heading-4 {
+    margin-right: 0;
   }
 
   .testimonal:before {

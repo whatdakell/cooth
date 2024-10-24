@@ -89,6 +89,9 @@ h1 .pill{
 
 		}
 	}
+	a{
+		width: 100%;
+	}
 	&.black:not(.yellowoutline) a{
 		background-color: black;
 		// border-color: $yellow;
