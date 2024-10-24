@@ -27,34 +27,34 @@ jQuery(function ($) {
 });
 
 
-jQuery(function ($) {
-	$(function () {
-		var isMenuAlreadyOpen = false;
-		$('.hh-header .elementor-menu-toggle').on('click', function () {
-			$('body').css('overflow', isMenuAlreadyOpen ? 'auto' : 'hidden');
-			isMenuAlreadyOpen = !isMenuAlreadyOpen;
-		});
+// jQuery(function ($) {
+// 	// $(function () {
+// 	// 	var isMenuAlreadyOpen = false;
+// 	// 	$('.hh-header .elementor-menu-toggle').on('click', function () {
+// 	// 		$('body').css('overflow', isMenuAlreadyOpen ? 'auto' : 'hidden');
+// 	// 		isMenuAlreadyOpen = !isMenuAlreadyOpen;
+// 	// 	});
 
-		$('.select-selected2').on('click', function (e) {
-			e.stopPropagation();
-			$('.select-items').toggleClass('select-hide');
-		});
+// 	// 	$('.select-selected2').on('click', function (e) {
+// 	// 		e.stopPropagation();
+// 	// 		$('.select-items').toggleClass('select-hide');
+// 	// 	});
 
-		$('#customToggle').on('change', function () {
-			var inputVal = $('#customToggle').val();
+// 		// $('#customToggle').on('change', function () {
+// 		// 	var inputVal = $('#customToggle').val();
 
-			var cont = document.getElementById('faq');
-			var cont1 = document.getElementById('faq2');
-			if (inputVal == 1) {
-				cont1.classList.remove('active');
-				cont.classList.add('active');
-			} else {
-				cont.classList.remove('active');
-				cont1.classList.add('active');
-			}
-		});
-	});
-});
+// 		// 	var cont = document.getElementById('faq');
+// 		// 	var cont1 = document.getElementById('faq2');
+// 		// 	if (inputVal == 1) {
+// 		// 		cont1.classList.remove('active');
+// 		// 		cont.classList.add('active');
+// 		// 	} else {
+// 		// 		cont.classList.remove('active');
+// 		// 		cont1.classList.add('active');
+// 		// 	}
+// 		// });
+// 	});
+// });
 
 
 jQuery(function ($) {
@@ -67,11 +67,11 @@ jQuery(function ($) {
 		});
 
 
-		function initOwl() {
-			$('.place-back-counter .counter-grid-item').each(function () {
-				$(this).appendTo('.owl-carousel').wrapAll("<div class='item' />");
-			});
-		}
+		// function initOwl() {
+		// 	$('.place-back-counter .counter-grid-item').each(function () {
+		// 		$(this).appendTo('.owl-carousel').wrapAll("<div class='item' />");
+		// 	});
+		// }
 		function initCardOwl() {
 			$('.owl-card').each(function () {
 				$(this).appendTo('.owl-carousel').wrapAll(`<div class='item' data-hash='${$(this).attr('id')}' />`);
@@ -82,7 +82,6 @@ jQuery(function ($) {
 		initCardOwl();
 
 		var owlCard = $('.owl-carousel');
-		
 
 		owlOptions = {
 			items: 1,
@@ -90,7 +89,7 @@ jQuery(function ($) {
 			center: true,
 			autoplay: false,
 			dots:false,
-			autoHeight: true,
+			autoHeight: false,
 			nav: true,
 			URLhashListener:true,
 			startPosition: 'URLHash',
@@ -98,15 +97,18 @@ jQuery(function ($) {
 			mouseDrag: false,
 			animateOut: 'fadeOut',
 			animateIn: 'fadeIn',
+			onInitialized: setOwlStageHeight,
+			onResized: setOwlStageHeight,
+			onTranslated: setOwlStageHeight,
 			responsive:
 			{
 							0: {
 									items:1,
-							autoHeight: true
+							autoHeight: false
 							},
 							768: {
 											items:1,
-							autoHeight: true
+							autoHeight: false
 							}
 			}
 		};
@@ -130,17 +132,71 @@ jQuery(function ($) {
 		$(toggleInput).attr('checked','checked')
 	}
 
-		owlCard.owlCarousel(owlOptions);
-		owlCard.on('resized.owl.carousel', function (event) {
-			// setOwlHeight();
-			})
-			
-			owlCard.on('translated.owl.carousel', function (event) {
+	// function setOwlHeight() {
+
+	// }
+	function setOwlStageHeight(event) {
+		var maxHeight = 0;
+		$('.owl-item.active').each(function () { // LOOP THROUGH ACTIVE ITEMS
+			// console.log(this,'currenta');
+				var thisHeight = parseInt( $(this).height() );
+				// console.log(thisHeight);
+				maxHeight=(maxHeight>=thisHeight?maxHeight:thisHeight);
+				// console.log(maxHeight);
+		});
+		$('.owl-carousel').css('height', maxHeight );
+		$('.owl-stage-outer').css('height', maxHeight ); // CORRECT DRAG-AREA SO BUTTONS ARE CLICKABLE
+}
+
+
+		// owlCard.on('resized.owl.carousel', function (event) {
+		// 	// setOwlHeight();
+
+		// 	var target = event.currentTarget;
+		// 	console.log('resize',$(target).find(".owl-item.active"));
+		// 	console.log(event);
+		// 	})
+
+
+			owlCard.on('changed.owl.carousel', function (event) {
+				setOwlStageHeight(event)
+				// var target = event.currentTarget;
+				// console.log(event,event.relatedTarget,'relate');
+				// console.log('changed', $(target).find(".owl-item.active"));
+				// var currentItem = event.item.index; // Index of the current item
+				// // Do something with the currentItem
+				// console.log(currentItem);
+				// console.log("current: ",event.relatedTarget.current())
 			//....
 			// setOwlHeight();
 			})
 
-
+		// 	function setOwlStageHeight(event) {
+		// 		var maxHeight = 0;
+		// 		$('.owl-item.active').each(function () { // LOOP THROUGH ACTIVE ITEMS
+		// 			console.log(this,current);
+		// 				var thisHeight = parseInt( $(this).height() );
+		// 				console.log(thisHeight);
+		// 				maxHeight=(maxHeight>=thisHeight?maxHeight:thisHeight);
+		// 				console.log(maxHeight);
+		// 		});
+		// 		$('.owl-carousel').css('height', maxHeight );
+		// 		$('.owl-stage-outer').css('height', maxHeight ); // CORRECT DRAG-AREA SO BUTTONS ARE CLICKABLE
+		// }
+		// setOwlStageHeight();
+			owlCard.owlCarousel(owlOptions);
+			owlCard.on('changed.owl.carousel', function (event) {
+				setOwlStageHeight(event);
+				var target = event.currentTarget;
+				console.log(event,event.relatedTarget,'relate');
+				console.log('changed', $(target).find(".owl-item.active"));
+				// var currentItem = event.item.index; // Index of the current item
+				// // Do something with the currentItem
+				// console.log(currentItem);
+				// console.log("current: ",event.relatedTarget.current())
+			//....
+			// setOwlHeight();
+			})
 		$('.owl-nav').wrap(`<div class='controls' />`)
 		$('.liked-popup').each(function () {
 			$(this).click(function(e){
@@ -150,19 +206,19 @@ jQuery(function ($) {
 	});
 });
 
-(function($) {
-	$ && $(function() {
-			$('.elementor-toggle-item:first-child')
-					.children('.elementor-tab-title')
-							.addClass('elementor-active')
-							.attr({
-									'aria-expanded': 'true',
-									tabindex: '0',
-									'aria-selected': 'true'
-							})
-							.end()
-					.children('.elementor-tab-content')
-							.addClass('elementor-active')
-							.css('display', 'block');
-	});
-})(window.jQuery);
+// (function($) {
+// 	$ && $(function() {
+// 			$('.elementor-toggle-item:first-child')
+// 					.children('.elementor-tab-title')
+// 							.addClass('elementor-active')
+// 							.attr({
+// 									'aria-expanded': 'true',
+// 									tabindex: '0',
+// 									'aria-selected': 'true'
+// 							})
+// 							.end()
+// 					.children('.elementor-tab-content')
+// 							.addClass('elementor-active')
+// 							.css('display', 'block');
+// 	});
+// })(window.jQuery);
