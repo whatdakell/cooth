@@ -1,5 +1,22 @@
-console.log('testttt')
+
 jQuery(function ($) {
+	// if($('.elementor-nav-menu--burger .elementor-active')){
+	// 	console.log('hello')
+	// 	.on( "click", function() {
+	// 		$( "p" ).toggle( flip++ % 2 === 0 );
+	// 	});
+	// }
+
+	$('.elementor-menu-toggle').on( "click", function() {
+		$('html').toggleClass('menu-open');
+		// console.log('s')
+		// $('body:after').css({"visibility": "visible"});
+	// 	$('html, body').css({
+	// 		overflow: 'hidden',
+	// 		height: '100%',
+	// });
+
+	});
 	$.fn.isInViewport = function () {
 		var elementTop = $(this).offset().top + 150;
 		var elementBottom = elementTop + $(this).outerHeight();

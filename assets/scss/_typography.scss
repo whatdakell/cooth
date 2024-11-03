@@ -1,5 +1,6 @@
 html {
 	font-size: 1rem;
+	overflow-x: hidden;
 
 	// @include bp(test1) {
 	// 	font-size: 0.9rem;
@@ -18,13 +19,19 @@ h1 .pill{
 .elementor-counter .elementor-counter-title{
 	line-height: 1;
 }
+.elementor-testimonial .pill{
+	z-index: -3;
+}
+.body-intro .pill{
+	z-index: -1;
+}
 .pill{
 	position: relative;
 	display: inline-block;
 	font-weight: 900;
 	z-index: 1;
 	&.white{
-		color:black;
+		color:#2B2B2D;
 		&:before{
 			background-color: white;
 		}
@@ -40,11 +47,12 @@ h1 .pill{
 	&:before{
 		content:'';
 		z-index: -1;
-		background-color: $yellow;
+		background-color: #92907D;
 		border:1px solid $grey;
 		position: absolute;
 		height: 1.1em;
     width: 100%;
+
 		padding: 5px 10px;
 		box-sizing: content-box!important;
 		// top:5px;
@@ -101,7 +109,7 @@ h1 .pill{
 		&:hover{
 			background-color: white;
 			border-color: white;
-			color:black;
+			color:#2B2B2D;
 		}
 
 	}

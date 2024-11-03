@@ -5,7 +5,7 @@
 @import 'global';
 // @import 'animate.css';
 @import 'owl';
-
+@import 'animations';
 
 html {
 	font-size: 1rem;
@@ -43,6 +43,31 @@ body{
 		padding-top:0;
 		padding-bottom:0;
 	}
+	.scroll-section-wrapper{
+		position: relative;
+		&:before{
+			content: '';
+			content: "";
+			background: linear-gradient(1deg, transparent 0, #f9f3ef 100%);
+			position: absolute;
+			top: 0;
+			z-index: 100;
+			width: 100%;
+			height: 7.5rem;
+		}
+	}
+	.select-content{
+		margin-top: auto;
+		margin-bottom: auto;
+		.body-intro {
+			margin-top: toRem(67);
+			.elementor-widget-container{
+				max-width: 700px;
+
+			}
+		}
+
+	}
 	.content-box{
 		margin-top: auto;
 		margin-bottom: auto;
@@ -59,6 +84,7 @@ body{
 
 	.pill{
 		&:before{
+			background-color: $yellow;
 			content:'';
 			padding: 0 toRem(35);
 		}
@@ -107,13 +133,23 @@ body{
 		margin-top: toRem(-200);
 		border-radius: 20.4px;
 		&:before{
+			background-size: 400px auto;
 			position: absolute;
-			left: -60px;
-			top:-68px;
+			left: -25px;
+			top:-37px;
+			@include bp(S){
+				// background-size: contain;
+				left: -45px;
+				top:-28px;
+				background-size: 300px auto;
+			}
 		}
 	}
 }
+.new-scroll-section-wrapper{
+	padding-top: toRem(73);
 
+}
 .scroll-section{
 	padding-top: toRem(166);
 	padding-bottom: toRem(92);
@@ -260,13 +296,17 @@ body{
 	}
 	&.horiztonal{
 		padding-left: 0;
+		@include bp(S){
+			margin-bottom: 35px;
+		}
 	}
 
 	.e-grid{
 		&.yellow{
 			.elementor-widget-counter .elementor-counter-number-wrapper{
-				background-color: $yellow;
-				color: black;
+				background-color: #92907D;
+
+				color: #2B2B2D;
 			}
 		}
 		.elementor-widget-counter{
@@ -304,7 +344,7 @@ body{
 				font-weight: 300;
 			}
 			.elementor-counter-number-wrapper{
-				background-color: #2b2b2d;
+				background-color: #92907D;
 				width: 86px;
 				height: 86px;
 				border-radius: 100%;
@@ -332,12 +372,18 @@ body{
 		width: 300px;
 	}
 	.text-item{
+		&.flourish0{
+			min-height: 375px;
+			top: -15px;
+
+		}
 		text-align: right;
 		max-width: 375px;
 		margin: auto;
 		@include bp(S){
 			padding-bottom: 40px;
 		}
+		&.fl
 		.heading-4{
 			display: flex;
 			width: auto;
@@ -365,6 +411,9 @@ body{
 	}
 	img{
 		transition: opacity 0.5 ease;
+	}
+	@include bp(S){
+		// margin-left:0;
 	}
 	&:after{
 		opacity: 0;
@@ -424,7 +473,7 @@ body{
 	padding: toRem(150) 0;
 	border-top: solid 0.5px #92907d;
 	&.white{
-		color:black;
+		color:#2B2B2D;
 		.swiper{
 			padding-bottom: toRem(50)!important;
 		}
@@ -439,7 +488,7 @@ body{
 			background-size: contain!important;
 		}
 		.swiper-pagination-bullet{
-			border:1px solid black;
+			border:1px solid #2B2B2D;
 			&-active{
 				background-color:#ffca45!important;
 			}
@@ -505,7 +554,7 @@ body{
 		line-height: normal!important;
 		letter-spacing: -1.08px;
 		.pill{
-			color:black;
+			color:#2B2B2D;
 			&:before{
 				padding:0 10px!important;
 			}
@@ -561,11 +610,27 @@ body{
 	position: relative;
 	overflow: hidden;
 	padding-top: toRem(120);
+	@include bp(M){
+		overflow: visible;
+		&:before{
+		top: -170px;
+		}
+	}
+	@include bp(S){
+
+		&::before{
+			// top: 300px;
+			right: -100px;
+			background-size: 10% auto;
+		}
+
+	}
 	&::before{
 		max-width: 250px;
 		position: absolute;
 		right:0;
 		left: auto;
+
 	}
 	.copy{
 		padding-top: toRem(50);
@@ -581,6 +646,11 @@ body{
 	.build-with {
 		padding-top: toRem(66);
 		padding-bottom: toRem(66);
+		@include bp(S){
+			.button.black{
+				margin-top: 30px;
+			}
+		}
 		.copy{
 		padding-top: 0;
 	}
@@ -597,8 +667,8 @@ body{
 
 .oro-call-out {
 	border-radius: 20.4px;
-	border-bottom-left-radius: 85.1px;
-	border-bottom-right-radius: 85.1px;
+	// border-bottom-left-radius: 85.1px;
+	// border-bottom-right-radius: 85.1px;
 	position: absolute;
 	top:-83px;
 	left:50%;
@@ -676,6 +746,9 @@ body{
 .work{
 	margin: toRem(100) auto;
 	.text-item{
+		@include bp(S){
+			margin-left: 0;
+		}
 		.copy{
 			margin-bottom: 41px;
 		}
@@ -733,6 +806,9 @@ body{
 			right:-53px;
 			width: 450px;
 			top:-240px;
+			@include bp(S){
+				top: 300px;
+			}
 		}
 	}
 }
@@ -742,7 +818,7 @@ body{
 
 
 .build-with-us{
-	height:toRem(400);
+	min-height:toRem(400);
 	padding: toRem(200) 0;
 	.body-intro {
 		max-width: 700px!important;
@@ -759,10 +835,17 @@ body{
 		bottom:-77px;
 		top:auto;
 		z-index: 0;
+		@include bp(S){
+			bottom:-120px;
+			background-size: 200px auto!important;
+			// opacity: 0.3;
+		}
 	}
 }
 
-
+.common-packages{
+	padding-top: toRem(50);
+}
 .toggle-content{
 	padding-top: toRem(50);
 
@@ -779,25 +862,30 @@ body{
 		background-color: black;
 		background-repeat: no-repeat;
 		background-position: 30px center;
-		background-size:  auto 30px;
+		background-size:  auto toRem(40);
 		padding-left: 10px;
 		background-repeat: no-repeat;
+		padding-top: 0;
+		padding-bottom: 0;
 		// background-position: center left;
+		@include bp(S){
+			// background-size:  auto 30px;
+		}
 	}
 	#elementor-tab-title-2182{
-		background-image: url('../../uploads/2024/10/cooth_creative@3x.png');
+		background-image: url('../../uploads/2024/11/cooth_creative.svg');
 	}
 	#elementor-tab-title-2183{
-		background-image: url('../../uploads/2024/10/cooth_code@3x.png');
+		background-image: url('../../uploads/2024/11/cooth_code.svg');
 
 	}
 	#elementor-tab-title-2184{
-		background-image: url('../../uploads/2024/10/cooth_continuum@3x.png');
+		background-image: url('../../uploads/2024/11/cooth_continuum.svg');
 		// padding-left: 190px;
 
 	}
 	#elementor-tab-title-2181{
-		background-image: url('../../uploads/2024/10/cooth_core@3x.png');
+		background-image: url('../../uploads/2024/11/cooth_core.svg');
 	}
 	.elementor-tab-content{
 		border:none!important;
@@ -806,8 +894,8 @@ body{
 	}
 	.elementor-toggle-title{
 		font-size: 16px;
-		margin-right: 40px;
-		margin-left: 130px;
+		margin-right: 20px;
+		margin-left: toRem(150);
 		font-weight: normal;
 		font-stretch: normal;
 		font-style: normal;
@@ -818,6 +906,9 @@ body{
 		padding-bottom: 30px;
 		color: #f9f3ef!important;
 		border:none;
+		@include bp(S){
+			font-size: 14px;
+		}
 	}
 	.elementor-toggle-item{
 		margin-bottom: toRem(30);
@@ -913,13 +1004,17 @@ body{
 			z-index: 100;
 			.plus-wrapper{
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 				@include bp(M){
 					flex-direction: column;
 				}
 				.plus-container{
-					min-width: 200px;
+					min-width: 100px;
 					margin-bottom: 10px;
+					align-items: baseline;
+					img{
+						text-align: left;
+					}
 					@include bp(M){
 						display: flex;
 						flex-direction: row;
@@ -1067,12 +1162,15 @@ body{
 	}
 
 	.tan-block{
-		background-color: #f9f3ef;
+		background-color:#92907D;
 		display: flex;
 		height:170px;
 		width:170px;
 		justify-content: center;
 		align-items: center;
+		&:hover{
+			background-color:$yellow;
+		}
 	}
 	.heading-4 h4{
 		font-size: 20px;
@@ -1082,7 +1180,7 @@ body{
 		line-height: normal;
 		letter-spacing: -0.6px;
 		text-align: center;
-		color: #2b2b2d;
+		color:white;
 	}
 	.smaller-copy{
 		margin-left: auto;
@@ -1252,6 +1350,7 @@ body{
   //   top: -28px;
   //   right: 11%;
 	// }
+	border: solid 0.5px #2b2b2d;
 	.flourish-wrapper:before{
 		background-repeat: no-repeat;
     position: absolute;
@@ -1314,8 +1413,8 @@ body{
 	padding: 0!important;
 	&:before{
 		// background-size: 500px auto;
-		background-size: 1200px auto !important;
-    top: -460px!important;
+		background-size: 1000px auto !important;
+    top: -370px!important;
     right: 0;
     left: auto!important;
     background-position: right top;
@@ -1325,7 +1424,7 @@ body{
 		}
 		@include bp(S){
 			background-size: contain!important;
-			top: -210px!important;
+			top: -240px!important;
 		}
 
 }
@@ -1345,10 +1444,11 @@ body{
 			background-size: 400px auto;
 			z-index: 1;
 			@include bp(M){
-				bottom: -197px;
+				bottom: -187px;
 			}
 			@include bp(S){
 				background-size: 300px auto;
+				bottom: -132px;
 			}
 		}
 
