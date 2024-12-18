@@ -37,6 +37,11 @@
 		height: 100%;
 		margin-bottom: toRem(50);
 	}
+	.heading-2 h2{
+		@include bp(S){
+			// font-size: 30px;
+		}
+	}
 	.same-space{
 		margin:toRem(50) auto;
 
@@ -83,6 +88,11 @@
 	padding: toRem(100) toRem(70);
   border-radius: 85.1px;
   background-color: #191919;
+	@include bp(S){
+		padding-left: 20px;
+		padding-right:20px;
+		padding-top: 80px;
+	}
 	.testimonal{
 		padding:0;
 		border:none!important;
@@ -108,25 +118,29 @@
 
 	}
 }
+
 .owl-carousel{
 	overflow: hidden;
 	border-radius: 25px;
 	background-color: #191919;
 	.liked-popup{
 		position: absolute;
-		top:45px;
-		height:20px;
-		width:20px;
-		right:120px;
-		box-sizing: content-box;
-		// padding: 10px 20px;
-		padding: 10px 20px;
-		padding-right: 50px;
-		padding-left:30px;
-		z-index: 1000;
-
-		border-radius: 22.8px;
-		background-color: #000;
+    top: 43px;
+    height: 20px;
+    width: 20px;
+    right: 44px;
+    box-sizing: content-box;
+    padding: 11px 20px;
+		padding-right: 120px;
+    padding-left: 10px;
+    z-index: 1000;
+    border-radius: 22.8px;
+    background-color: #000;
+    border: 1px solid #92907D;
+		@include bp(S){
+			right:10px;
+			top: 28px;
+		}
 		&:hover{
 			.elementor-icon{
 				background-image: url('../../uploads/2024/10/heart.svg');
@@ -139,18 +153,18 @@
 					background-image: url('../../uploads/2024/10/heart.svg');
 				}
 		}
-		&:before{
-			content: '';
-			height: 100%;
-			width: 20px;
-			position: absolute;
-			left: 0;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-image: url('../../uploads/2024/10/vertical-bar-to-start-the-music-component.svg');
-		}
+		// &:before{
+		// 	content: '';
+		// 	height: 100%;
+		// 	width: 20px;
+		// 	position: absolute;
+		// 	left: 0;
+		// 	background-size: contain;
+		// 	background-repeat: no-repeat;
+		// 	background-image: url('../../uploads/2024/10/vertical-bar-to-start-the-music-component.svg');
+		// }
 		&:active{
-			fill:blue;
+			// fill:blue;
 		}
 		.elementor-icon{
 			height:25px;
@@ -171,7 +185,7 @@
 	.controls{
 		opacity: 0.85;
 		border-radius: 22.8px;
-		background-color: #000;
+		// background-color: #000;
 		right:45px;
 
 		top:45px;
@@ -180,6 +194,10 @@
 		align-items: center;
 		padding: 10px 20px;
 		padding-left: 0px;
+		@include bp(S){
+			right: 5px;
+			top: 30px;
+		}
 	}
 	.owl-nav{
 		display: flex;

@@ -1,6 +1,20 @@
 body {
 	margin: 0px auto;
+	// background-color: #f9f3ef;
 	// max-width: 1440px;
+}
+.elementor-element-87ebd7c{
+	@include bp(S){
+		max-width: 300px!important;
+	}
+}
+.page-id-1298{
+ #Nav{
+	.hero-mode-toggle,
+	.elementor-element-20b7e974{
+		display: none;
+	}
+ }
 }
 .elementor-button{
  a{
@@ -164,6 +178,9 @@ html{
 }
 .max-width{
 	width:80%;
+	@include bp(S){
+		width: 100%;
+	}
 }
 .same-space{
 	margin: toRem(100) auto;

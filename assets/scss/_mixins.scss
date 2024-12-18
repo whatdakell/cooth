@@ -25,7 +25,7 @@
 }
 
 @function toRem($value) {
-	$remValue: calc($value / 16) + rem; 
+	$remValue: calc($value / 16) + rem;
 	@return $remValue;
 }
 
@@ -78,6 +78,11 @@
 
 // Media Queries
 @mixin bp($point, $min: false, $max: false) {
+	@if $point == max {
+		@media (max-width: 1400px) {
+			@content;
+		}
+	}
 	@if $point == desktop {
 		@media (max-width: 1200px) {
 			@content;
@@ -148,3 +153,71 @@
 		}
 	}
 }
+
+$maxWidth: 1900px;
+@mixin flourishCenter(){
+	max-width: $maxWidth;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+
+.testimonal.white{
+
+	max-width: $maxWidth!important;
+	@include bp(S){
+		padding-bottom: 120px;
+	}
+
+}
+// Our Method
+.build-with-us-testi,
+.inner-hero,
+.bwu{
+&:before{
+	@include flourishCenter()
+}
+}
+
+
+	#footer{
+		display: flex;
+	}
+
+	.footer {
+		.footer-column {
+			width: 50%;
+		}
+		display: flex;
+		color: white;
+		padding: 3.125rem 0px !important;
+		margin: auto;
+		align-items: center;
+		justify-content: center;
+		background-color: #92907d;
+
+		.logo-section {
+			display: flex;
+			align-items: center;
+			img {
+				margin-right: 20px;
+			}
+		}
+		.e-con-inner {
+			display: flex;
+			flex-direction: row;
+			max-width: 1125px !important;
+			padding: 2%;
+
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			margin: auto;
+			width: 90% !important;
+		}
+		a {
+			margin-right: 20px;
+			color: white;
+			text-decoration: none;
+		}
+	}

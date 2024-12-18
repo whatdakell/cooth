@@ -12,6 +12,63 @@ a {
   box-sizing: border-box;
 }
 
+.testimonal.white {
+  max-width: 1900px !important;
+}
+
+.build-with-us-testi:before,
+.inner-hero:before,
+.bwu:before {
+  max-width: 1900px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#footer {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  color: white;
+  padding: 3.125rem 0px !important;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #92907d;
+}
+
+.footer .footer-column {
+  width: 50%;
+}
+
+.footer .logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.footer .logo-section img {
+  margin-right: 20px;
+}
+
+.footer .e-con-inner {
+  display: flex;
+  flex-direction: row;
+  max-width: 1125px !important;
+  padding: 2%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90% !important;
+}
+
+.footer a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+}
+
 html {
   font-size: 1rem;
   overflow-x: hidden;
@@ -27,6 +84,7 @@ h1 .pill {
 
 .elementor-testimonial .pill {
   z-index: -3;
+  color: black !important;
 }
 
 .body-intro .pill {
@@ -37,6 +95,7 @@ h1 .pill {
   position: relative;
   display: inline-block;
   font-weight: 900;
+  font-family: "Fustat Extra Bold" !important;
   z-index: 1;
 }
 
@@ -74,12 +133,27 @@ h1 .pill {
   border-radius: 70px;
 }
 
+.footer .elementor-heading-title,
+.elementor-nav-menu .elementor-item {
+  font-family: "Fustat Extra Bold", Sans-serif !important;
+  letter-spacing: normal;
+}
+
 .elementor-button {
   min-width: 14.1875rem;
   font-weight: bold;
   --e-global-typography-accent-font-weight: bold;
   font-size: 1.25rem !important;
+  font-family: "Fustat Extra Bold", Sans-serif !important;
   padding: 1.125rem 3.125rem !important;
+}
+
+.elementor-button .elementor-item {
+  font-family: "Fustat Extra Bold", Sans-serif !important;
+}
+
+.elementor-counter .elementor-counter-number {
+  font-family: "Fustat Extra Bold", Sans-serif !important;
 }
 
 .text-width {
@@ -163,9 +237,9 @@ h4 em,
 h5 em,
 h6 em,
 p em {
-  font-family: "NyghtSerif", Sans-serif !important;
+  font-family: "STIX Two Text", Sans-serif !important;
   font-weight: 300 !important;
-  letter-spacing: normal !important;
+  letter-spacing: -0.03em !important;
 }
 
 .headline-1 h1,
@@ -176,19 +250,21 @@ p em {
 .headline-1 h6 {
   font-size: 8.25rem;
   font-weight: 900;
+  font-family: "Fustat Extra Bold" !important;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: -6.6px;
+  letter-spacing: -3px;
 }
 
 .headline-1 {
   font-size: 8.25rem;
   font-weight: 900;
+  font-family: "Fustat Extra Bold" !important;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: -6.6px;
+  letter-spacing: -3px;
 }
 
 .headling-3 {
@@ -202,10 +278,14 @@ p em {
   color: #f9f3ef;
 }
 
+.heading-4,
+.heading-4 h1,
 .heading-4 h4 {
   font-size: 4.375rem;
   line-height: 1.1;
   font-weight: 900 !important;
+  font-family: "Fustat Extra Bold" !important;
+  letter-spacing: -3px;
   --e-global-typography-primary-weight: 900;
 }
 
@@ -228,11 +308,11 @@ p em {
   line-height: 1.21;
   letter-spacing: normal;
   text-align: left;
-  font-family: "SatoshiVariable" !important;
+  font-family: "Fustat" !important;
 }
 
 .smaller-copy {
-  font-family: "SatoshiVariable" !important;
+  font-family: "Fustat" !important;
   font-size: 16px;
   font-stretch: normal;
   font-style: normal;
@@ -331,6 +411,11 @@ p em {
 
 body {
   margin: 0px auto;
+}
+
+.page-id-1298 #Nav .hero-mode-toggle,
+.page-id-1298 #Nav .elementor-element-20b7e974 {
+  display: none;
 }
 
 .elementor-button a {
@@ -682,17 +767,18 @@ html:after {
 
 .owl-carousel .liked-popup {
   position: absolute;
-  top: 45px;
+  top: 43px;
   height: 20px;
   width: 20px;
-  right: 120px;
+  right: 44px;
   box-sizing: content-box;
-  padding: 10px 20px;
-  padding-right: 50px;
-  padding-left: 30px;
+  padding: 11px 20px;
+  padding-right: 120px;
+  padding-left: 10px;
   z-index: 1000;
   border-radius: 22.8px;
   background-color: #000;
+  border: 1px solid #92907D;
 }
 
 .owl-carousel .liked-popup:hover .elementor-icon {
@@ -701,21 +787,6 @@ html:after {
 
 .owl-carousel .liked-popup.active .elementor-icon {
   background-image: url("../../uploads/2024/10/heart.svg");
-}
-
-.owl-carousel .liked-popup:before {
-  content: "";
-  height: 100%;
-  width: 20px;
-  position: absolute;
-  left: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("../../uploads/2024/10/vertical-bar-to-start-the-music-component.svg");
-}
-
-.owl-carousel .liked-popup:active {
-  fill: blue;
 }
 
 .owl-carousel .liked-popup .elementor-icon {
@@ -736,7 +807,6 @@ html:after {
 .owl-carousel .controls {
   opacity: 0.85;
   border-radius: 22.8px;
-  background-color: #000;
   right: 45px;
   top: 45px;
   position: absolute;
@@ -1443,17 +1513,6 @@ body {
   position: relative;
 }
 
-.inner-hero .scroll-section-wrapper:before {
-  content: "";
-  content: "";
-  background: linear-gradient(1deg, transparent 0, #f9f3ef 100%);
-  position: absolute;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-  height: 7.5rem;
-}
-
 .inner-hero .select-content {
   margin-top: auto;
   margin-bottom: auto;
@@ -1477,6 +1536,14 @@ body {
   margin-top: 4.1875rem;
 }
 
+.inner-hero .content-box.tester {
+  max-width: 100%;
+}
+
+.inner-hero .content-box.tester .body-intro .elementor-widget-container {
+  max-width: 700px;
+}
+
 .hero {
   height: 100%;
 }
@@ -1487,11 +1554,20 @@ body {
   padding: 0 2.1875rem;
 }
 
+.hero .headline-1 h1 {
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+}
+
+.hero .headline-1 h1 em {
+  letter-spacing: -0.45rem !important;
+}
+
 .hero .content-box {
   margin-top: auto;
   margin-bottom: 18.75rem;
-  max-width: 851px;
-  width: 85%;
+  max-width: 860px;
+  width: 90%;
 }
 
 .hero .content-box .copy {
@@ -1794,7 +1870,7 @@ body {
 }
 
 .slider:not(.home).elementor-widget-testimonial-carousel .elementor-testimonial .pill:before {
-  height: 1em;
+  min-height: 1em;
   bottom: 40%;
 }
 
@@ -1813,12 +1889,12 @@ body {
 
 .testimonal.white:before {
   top: auto;
-  width: 52.5rem;
-  right: 0;
+  min-width: 103.5rem;
+  right: -50rem;
   z-index: 100;
   left: auto;
   transform: none;
-  bottom: -12.0625rem;
+  bottom: -13.7rem;
   background-size: contain !important;
 }
 
@@ -1933,8 +2009,9 @@ body {
 }
 
 .testimonal .elementor-testimonial__cite .elementor-testimonial__name {
-  font-family: "NyghtSerif", Sans-serif;
+  font-family: "STIX Two Text", Sans-serif;
   font-size: 20px;
+  font-style: italic;
 }
 
 .testimonal .elementor-testimonial__cite span {
@@ -2186,7 +2263,7 @@ body {
 .toggle-content .elementor-toggle-title {
   font-size: 16px;
   margin-right: 20px;
-  margin-left: 9.375rem;
+  margin-left: 11.25rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -2216,6 +2293,28 @@ body {
   border-bottom-right-radius: 0px;
 }
 
+.purpose .same-space:before,
+.purpose .core-section:before,
+.purpose .content-box:before {
+  content: "";
+  position: absolute;
+  z-index: -100;
+  background-color: #191919;
+  left: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 100%;
+  height: 100%;
+  bottom: -6.25rem;
+  top: -6.25rem;
+  display: block;
+  width: 100vw;
+  padding: 6.25rem;
+  box-sizing: content-box;
+  margin-left: 3.125rem;
+}
+
 .purpose:after {
   content: "";
   position: absolute;
@@ -2230,9 +2329,9 @@ body {
 .purpose:before {
   position: absolute;
   background-size: cover !important;
-  height: 1400px;
+  height: 1328px;
   top: -11px;
-  left: -60px;
+  left: -53px;
   margin-left: 1px;
 }
 
@@ -2243,7 +2342,8 @@ body {
 .butter-wrapper .e-con-inner {
   max-width: 1440px !important;
   width: 100% !important;
-  margin-right: 0;
+  max-width: 1337px !important;
+  margin: auto;
 }
 
 .butter-wrapper .e-con-inner .bread-butter-grid {
@@ -2253,10 +2353,14 @@ body {
 
 .butter-wrapper .e-con-inner .bread-butter-grid .elementor-widget-image {
   position: absolute;
-  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 662px;
+  right: -300px;
+  min-width: 800px;
+}
+
+.butter-wrapper .e-con-inner .bread-butter-grid .content-box {
+  width: 107%;
 }
 
 .butter-wrapper .e-con-inner .bread-butter-grid .content-box .copy {
@@ -2285,8 +2389,10 @@ body {
 
 .butter-wrapper .e-con-inner .bread .plus-wrapper .plus-container {
   min-width: 100px;
+  max-width: 118px;
   margin-bottom: 10px;
-  align-items: baseline;
+  align-items: center;
+  margin-right: 30px;
 }
 
 .butter-wrapper .e-con-inner .bread .plus-wrapper .plus-container img {
@@ -2294,7 +2400,7 @@ body {
 }
 
 .butter-wrapper .e-con-inner .bread .plus-wrapper p {
-  font-family: SatoshiVariable;
+  font-family: Fustat;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -2338,9 +2444,8 @@ body {
 
 .build-with-us-testi:before {
   position: absolute;
-  width: 300px;
+  background-size: 300px auto !important;
   right: 0;
-  left: auto;
   top: -60px;
   z-index: -1;
 }
@@ -2391,16 +2496,6 @@ body {
   text-align: left;
   color: #2b2b2d;
   max-width: 90% !important;
-}
-
-.discomfort:after {
-  content: "";
-  position: absolute;
-  background-color: #f9f3ef;
-  height: 25rem;
-  width: 100%;
-  top: 0;
-  z-index: -1;
 }
 
 .cooth-block {
@@ -2708,6 +2803,194 @@ body {
   justify-content: center;
 }
 
+.post {
+  background-color: #f9f3ef;
+  padding-top: 4rem;
+}
+
+.post .elementor-widget-theme-post-title {
+  margin-top: 10px;
+  padding-bottom: 4rem;
+  max-width: 1000px !important;
+}
+
+.post .elementor-widget-post-info {
+  padding-bottom: 1rem;
+}
+
+.post strong,
+.post b {
+  font-family: "Fustat Extra Bold" !important;
+}
+
+.post .smaller-copy {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.post h2 {
+  font-weight: normal;
+}
+
+.blog-bottom-wrapper {
+  width: 80% !important;
+  margin-left: 6%;
+  max-width: 1000px !important;
+  margin-right: auto;
+}
+
+.blog-wrapper {
+  width: 80% !important;
+  max-width: 800px !important;
+  margin-left: 6%;
+  margin-right: auto;
+}
+
+.blog-wrapper .e-con-inner {
+  width: 100% !important;
+  padding-left: 0 !important;
+}
+
+.elementor-widget-post-info span,
+.blog-eyebrow .elementor-heading-title {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "Fustat Extra Bold" !important;
+}
+
+.blog-eyebrow .elementor-heading-title {
+  color: #92907d;
+}
+
+.white .elementor-heading-title {
+  color: white;
+}
+
+.key-takeaway {
+  background-color: #2b2b2d;
+  padding: 0;
+}
+
+.key-takeaway .blog-eyebrow {
+  padding: 20px;
+  background-color: black;
+}
+
+.key-takeaway .blog-eyebrow .elementor-heading-title {
+  color: white !important;
+}
+
+.key-takeaway ul {
+  padding: 40px;
+  padding-left: 45px;
+  margin: 0;
+}
+
+.key-takeaway .e-con-inner {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.blog-block {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.blog-block:first-of-type {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.blog-block + .blog-block {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.blog-block:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.blog-header {
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.9px;
+  text-align: left;
+  color: #92907d !important;
+  margin-bottom: 1rem !important;
+}
+
+.blog-point {
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.25;
+  letter-spacing: -0.48px;
+  text-align: left;
+  color: #2b2b2d;
+  margin-bottom: 1.5rem;
+}
+
+.blog-block,
+.blog-copy {
+  margin-bottom: 17px !important;
+}
+
+.blog-block ul,
+.blog-copy ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blog-block li b,
+.blog-block span,
+.blog-block p,
+.blog-copy li b,
+.blog-copy span,
+.blog-copy p {
+  font-size: 16px;
+}
+
+.blog-posts .elementor-post__thumbnail {
+  border-radius: 20px;
+}
+
+.blog-posts .elementor-post {
+  position: relative;
+}
+
+.blog-posts .elementor-post__text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@media (max-width: 1400px) {
+  .butter-wrapper .e-con-inner {
+    padding-left: 4% !important;
+  }
+
+  .butter-wrapper .e-con-inner .bread-butter-grid .elementor-widget-image {
+    right: -60px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .butter-wrapper .e-con-inner .bread-butter-grid .content-box {
+    width: 97.5%;
+  }
+}
+
 @media (max-width: 1024px) {
   html {
     font-size: 0.9rem;
@@ -2741,11 +3024,15 @@ body {
     top: -170px;
   }
 
+  .purpose {
+    border-radius: 41.4px;
+  }
+
   .purpose:before {
     border-radius: 51.4px;
     background-size: contain !important;
-    left: -37px;
-    top: -10px;
+    left: -34px;
+    top: -7px;
   }
 
   .butter-wrapper .e-con-inner .bread .plus-wrapper {
@@ -2756,6 +3043,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .elementor-widget-testimonial .pill:before {
@@ -2782,6 +3070,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .testimonal.white {
+    padding-bottom: 120px;
+  }
+
   html {
     font-size: 0.8rem;
   }
@@ -2797,6 +3089,25 @@ body {
   .headline-1 h5,
   .headline-1 h6 {
     line-height: 1.2;
+    font-weight: 800;
+  }
+
+  .headline-1 {
+    font-weight: 800;
+  }
+
+  .heading-4,
+  .heading-4 h1,
+  .heading-4 h4 {
+    font-weight: 800 !important;
+  }
+
+  .heading-2 h2 {
+    font-weight: 800 !important;
+  }
+
+  .elementor-element-87ebd7c {
+    max-width: 300px !important;
   }
 
   #Nav .e-con-inner {
@@ -2807,14 +3118,46 @@ body {
     flex-shrink: 30;
   }
 
+  .max-width {
+    width: 100%;
+  }
+
+  .owl-card {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 80px;
+  }
+
+  .owl-carousel .liked-popup {
+    right: 10px;
+    top: 28px;
+  }
+
+  .owl-carousel .controls {
+    right: 5px;
+    top: 30px;
+  }
+
   html {
     font-size: 0.55rem;
+  }
+
+  .inner-hero .scroll-section-wrapper {
+    max-height: 100%;
   }
 
   .home-blf .go-foward:before {
     left: -45px;
     top: -28px;
     background-size: 300px auto;
+  }
+
+  .new-scroll-section-wrapper {
+    padding-bottom: 4.5625rem;
+  }
+
+  .scroll-section {
+    padding-left: 40px;
   }
 
   .scroll-section-wrapper {
@@ -2854,6 +3197,10 @@ body {
     top: -47px;
   }
 
+  .testimonal .elementor-testimonial__content {
+    max-width: 100%;
+  }
+
   .out-method::before {
     right: -100px;
     background-size: 10% auto;
@@ -2869,12 +3216,18 @@ body {
 
   .oro-call-out .inner-width.e-flex.e-con-boxed .e-con-inner {
     max-width: 100%;
+    padding-left: 10px !important;
+  }
+
+  .oro-call-out .copy.icon:before {
+    top: 4px;
   }
 
   .oro-call-out .build-with {
     padding: 10px;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 90%;
+    padding: 20px 10px 40px 10px;
   }
 
   .oro-call-out .build-with .e-con-inner {
@@ -2895,18 +3248,45 @@ body {
     background-size: 200px auto !important;
   }
 
+  .toggle-content .elementor-tab-title {
+    background-position: 15px center;
+  }
+
   .toggle-content .elementor-toggle-title {
     font-size: 14px;
   }
 
+  .purpose {
+    border-radius: 36.4px;
+  }
+
   .purpose:before {
-    left: -4%;
+    background-size: 700px auto !important;
+    left: -26px;
+    top: -5px;
+  }
+
+  .butter-wrapper .e-con-inner {
+    padding-left: 5% !important;
   }
 
   .butter-wrapper .e-con-inner .bread-butter-grid .elementor-widget-image {
     position: relative;
     top: auto;
     transform: translateY(0);
+    right: auto;
+    width: 95.5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .build-with-us-testi:before {
+    background-size: 150px auto !important;
+    top: -64px;
+  }
+
+  .build-with-us-testi .elementor-widget-testimonial .elementor-testimonial-content {
+    width: 100%;
   }
 
   .full-width-inner .e-con-full {
@@ -2956,5 +3336,13 @@ body {
 
   .trustc .text-width {
     margin-top: 3.75rem !important;
+  }
+
+  .trustc .button-group {
+    align-items: flex-start;
+  }
+
+  .blog-header {
+    font-size: 20px;
   }
 }

@@ -28,7 +28,7 @@ jQuery(function ($) {
 	};
 
 	$(window).on('resize scroll', function () {
-		$('.hh-in-view').each(function () {
+		$('.in-view').each(function () {
 			if ($(this).isInViewport()) {
 				$(this).addClass('in-viewport');
 			}
@@ -78,17 +78,25 @@ jQuery(function ($) {
 	$(function () {
 		//OWL
 
-		$(".toggle-click").click(function(e){
-			$(e.currentTarget).toggleClass('active')
-			$(".toggle-class").fadeToggle();
-		});
-
 
 		// function initOwl() {
 		// 	$('.place-back-counter .counter-grid-item').each(function () {
 		// 		$(this).appendTo('.owl-carousel').wrapAll("<div class='item' />");
 		// 	});
 		// }
+		function setOwlStageHeight(event) {
+			var maxHeight = 0;
+			$('.owl-item.active').each(function () { // LOOP THROUGH ACTIVE ITEMS
+				// console.log(this,'currenta');
+					var thisHeight = parseInt( $(this).height() );
+					console.log(thisHeight);
+					maxHeight=(maxHeight>=thisHeight?maxHeight:thisHeight);
+					// console.log(maxHeight);
+			});
+			$('.owl-carousel').css('height', maxHeight );
+			$('.owl-stage-outer').css('height', maxHeight ); // CORRECT DRAG-AREA SO BUTTONS ARE CLICKABLE
+	}
+
 		function initCardOwl() {
 			$('.owl-card').each(function () {
 				$(this).appendTo('.owl-carousel').wrapAll(`<div class='item' data-hash='${$(this).attr('id')}' />`);
@@ -152,18 +160,6 @@ jQuery(function ($) {
 	// function setOwlHeight() {
 
 	// }
-	function setOwlStageHeight(event) {
-		var maxHeight = 0;
-		$('.owl-item.active').each(function () { // LOOP THROUGH ACTIVE ITEMS
-			// console.log(this,'currenta');
-				var thisHeight = parseInt( $(this).height() );
-				// console.log(thisHeight);
-				maxHeight=(maxHeight>=thisHeight?maxHeight:thisHeight);
-				// console.log(maxHeight);
-		});
-		$('.owl-carousel').css('height', maxHeight );
-		$('.owl-stage-outer').css('height', maxHeight ); // CORRECT DRAG-AREA SO BUTTONS ARE CLICKABLE
-}
 
 
 		// owlCard.on('resized.owl.carousel', function (event) {
@@ -220,6 +216,16 @@ jQuery(function ($) {
 				$(e.currentTarget).toggleClass('active')
 			});
 		});
+
+		$(".toggle-click").click(function(e){
+			$(e.currentTarget).toggleClass('active');
+			$(".toggle-class").fadeToggle();
+
+			setTimeout(function () {
+				setOwlStageHeight(e);
+			}, 500);
+		});
+
 	});
 });
 

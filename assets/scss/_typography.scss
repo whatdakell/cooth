@@ -21,6 +21,7 @@ h1 .pill{
 }
 .elementor-testimonial .pill{
 	z-index: -3;
+	color:black!important;
 }
 .body-intro .pill{
 	z-index: -1;
@@ -29,6 +30,7 @@ h1 .pill{
 	position: relative;
 	display: inline-block;
 	font-weight: 900;
+	font-family: 'Fustat Extra Bold'!important;
 	z-index: 1;
 	&.white{
 		color:#2B2B2D;
@@ -69,13 +71,26 @@ h1 .pill{
 	}
 
 }
-
+// Nav items
+.footer .elementor-heading-title,
+.elementor-nav-menu .elementor-item{
+	font-family: "Fustat Extra Bold", Sans-serif!important;
+	letter-spacing: normal;
+}
 .elementor-button{
 	min-width: toRem(227);
 	font-weight: bold;
 	--e-global-typography-accent-font-weight: bold;
 	font-size: toRem(20)!important;
+	font-family: "Fustat Extra Bold", Sans-serif!important;
 	padding: toRem(18) toRem(50)!important;
+	.elementor-item{
+		font-family: "Fustat Extra Bold", Sans-serif!important;
+	}
+}
+.elementor-counter .elementor-counter-number{
+	font-family: "Fustat Extra Bold", Sans-serif!important;
+
 }
 .text-width{
 	z-index: 10;
@@ -142,28 +157,36 @@ h1,h2,h3,h4,h5,h6, p{
 	em{
 		font-family: $ny!important;
 		font-weight: 300!important;
-		letter-spacing: normal!important;
+		letter-spacing: -0.03em!important;
 	}
 }
 .headline-1 {h1,h2,h3,h4,h5,h6 {
 	font-size: toRem(132);
   font-weight: 900;
+	font-family: 'Fustat Extra Bold'!important;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: -6.6px;
+	letter-spacing: -3px;
+	// letter-spacing: -0.3rem;
 	@include bp(S) {
 		line-height: 1.2;
+		font-weight: 800;
 	}
 }
 }
 .headline-1 {
 	font-size: toRem(132);
   font-weight: 900;
+	font-family: 'Fustat Extra Bold'!important;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
-  letter-spacing: -6.6px;
+  letter-spacing: -3px;
+	@include bp(S) {
+		// line-height: 1.2;
+		font-weight: 800;
+	}
 }
 
 .headling-3 {
@@ -176,11 +199,18 @@ h1,h2,h3,h4,h5,h6, p{
   text-align: center;
   color: #f9f3ef;
 }
+.heading-4,
+.heading-4 h1,
 .heading-4 h4{
   font-size: toRem(70);
 	line-height: 1.1;
   font-weight: 900!important;
+	font-family: 'Fustat Extra Bold'!important;
+	letter-spacing: -3px;
 	--e-global-typography-primary-weight: 900;
+	@include bp(S){
+		font-weight: 800!important;
+	}
 }
 
 .heading-2 h2{
@@ -192,6 +222,9 @@ h1,h2,h3,h4,h5,h6, p{
   letter-spacing: -4px;
   text-align: left;
   color: #f9f3ef;
+	@include bp(S){
+		font-weight: 800!important;
+	}
 }
 
 .copy p{
@@ -203,10 +236,10 @@ h1,h2,h3,h4,h5,h6, p{
   line-height: 1.21;
   letter-spacing: normal;
   text-align: left;
-	font-family: "SatoshiVariable"!important;
+	font-family: "Fustat"!important;
 }
 .smaller-copy{
-	font-family: "SatoshiVariable"!important;
+	font-family: "Fustat"!important;
   font-size: 16px;
   // font-weight: bold;
   font-stretch: normal;
